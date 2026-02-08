@@ -1,4 +1,4 @@
-# TechNova - Modern Technology Company Website
+# SL - Modern Technology Company Website
 
 A production-ready, scalable, high-performance tech company website built with React, Tailwind CSS, and Framer Motion.
 
@@ -237,4 +237,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Built with ❤️ by [Your Name/Company]
+Built with ❤️ by [SL]
+
