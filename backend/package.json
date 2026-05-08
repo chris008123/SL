@@ -1,0 +1,27 @@
+{
+  "name": "sl-newsletter-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Newsletter subscription API backend with Brevo integration",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test": "node test-connection.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "joi": "^17.11.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": ["newsletter", "brevo", "sendinblue", "express", "api"],
+  "author": "SL",
+  "license": "MIT"
+}

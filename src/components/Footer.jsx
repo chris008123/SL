@@ -2,8 +2,9 @@ import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { 
   Github, Twitter, Linkedin, Instagram, Mail, Phone, MapPin,
-  ArrowRight, CheckCircle2 
+  ArrowRight, CheckCircle2, Loader2 
 } from 'lucide-react'
+import NewsletterSubscribe from './NewsletterSubscribe'
 
 const footerLinks = {
   Company: [
@@ -32,42 +33,27 @@ const footerLinks = {
   ],
 }
 
-const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/techsl9181-hue' },
-  { name: 'Twitter', icon: Twitter, href: 'https://x.com/TechSl72541/' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/tech-sl-954995405/' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/techsl9181/' },
-]
+  const socialLinks = [
+    { name: 'GitHub', icon: Github, href: 'https://github.com/techsl9181-hue' },
+    { name: 'Twitter', icon: Twitter, href: 'https://x.com/TechSl72541/' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/tech-sl-954995405/' },
+    { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/techsl9181/' },
+  ]
 
 export default function Footer() {
   return (
     <footer className="bg-dark-900 dark:bg-dark-950 border-t border-dark-800">
-      {/* Newsletter Section */}
-      <div className="border-b border-dark-800">
-        <div className="container-custom py-12">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div className="text-center lg:text-left">
-              <h3 className="text-xl font-semibold text-white mb-2">
-                Stay Updated
-              </h3>
-              <p className="text-dark-400">
-                Get the latest tech insights and company updates delivered to your inbox.
-              </p>
-            </div>
-            <form className="flex w-full lg:w-auto gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 lg:w-80 px-4 py-3 rounded-lg bg-dark-800 border border-dark-700 text-white placeholder-dark-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-              />
-              <button type="submit" className="btn-primary whitespace-nowrap">
-                <span>Subscribe</span>
-                <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
+       {/* Newsletter Section */}
+       <div className="border-b border-dark-800">
+         <div className="container-custom py-12">
+           <NewsletterSubscribe
+             title="Stay Updated"
+             description="Get the latest tech insights and company updates delivered to your inbox."
+             source="footer"
+             variant="minimal"
+           />
+         </div>
+       </div>
 
       {/* Main Footer */}
       <div className="container-custom py-16">
@@ -86,21 +72,26 @@ export default function Footer() {
               Transforming businesses with cutting-edge AI, cloud solutions, and digital innovation. Build the future with us.
             </p>
             
-            {/* Contact Info */}
-            <div className="space-y-3">
-              <a href="mailto:hello@yourdomain.com" className="flex items-center space-x-2 text-dark-400 hover:text-primary-400 transition-colors duration-200">
-                <Mail className="w-4 h-4" />
-                <span>hello@yourdomain.com</span>
-              </a>
-              <a href="tel:+233534555395, +233547645984" className="flex items-center space-x-2 text-dark-400 hover:text-primary-400 transition-colors duration-200">
-                <Phone className="w-4 h-4" />
-                <span>+233 53 455 5395</span>
-              </a>
-              <div className="flex items-center space-x-2 text-dark-400">
-                <MapPin className="w-4 h-4" />
-                <span>Unity Hall Street, Kumasi, Ghana</span>
-              </div>
-            </div>
+             {/* Contact Info */}
+             <div className="space-y-3">
+                <a href="mailto:techsl9181@gmail.com" className="flex items-center space-x-2 text-dark-400 hover:text-primary-400 transition-colors duration-200">
+                  <Mail className="w-4 h-4" />
+                  <span>techsl9181@gmail.com</span>
+                </a>
+               <a href="tel:+233534555395,+233547645984" className="flex items-center space-x-2 text-dark-400 hover:text-primary-400 transition-colors duration-200">
+                 <Phone className="w-4 h-4" />
+                 <span>+233 53 455 5395, +233 54 764 5984</span>
+               </a>
+               <div className="flex items-center space-x-2 text-dark-400">
+                 <MapPin className="w-4 h-4" />
+                 <span>Unity Hall Street, Kumasi, Ghana</span>
+               </div>
+               <div className="pt-2">
+                 <Link to="/unsubscribe" className="text-sm text-dark-500 hover:text-primary-400 transition-colors">
+                   Unsubscribe from newsletter
+                 </Link>
+               </div>
+             </div>
           </div>
 
           {/* Links Columns */}

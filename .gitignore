@@ -1,6 +1,90 @@
+# Dependencies
 node_modules/
+backend/node_modules/
+
+# Environment variables
 .env
+.env.local
+.env.*.local
+backend/.env
+backend/.env.local
+
+# Build outputs
 dist/
-PRODUCTION_TEMPLATE.md
+build/
+.vite/
+out/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.pnpm-debug.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by testing frameworks
+coverage/
+.nyc_output/
+
+# Uploaded files (e.g. when using a CDN)
+public/uploads/
+public/og-image.jpg  # Uncomment if you want to exclude generated OG images
+
+# Production configuration (contains real API keys & URLs)
 production-values.json
-changes.md
+
+# Template files (keep in repo, but ignore rendered copies if any)
+# PRODUCTION_TEMPLATE.md  # Keep in repo — don't ignore
+
+# OS-generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Temp files
+.tmp/
+temp/
+*.tmp
+*.temp
+
+# Lock files (optional — some teams commit these; adjust per your workflow)
+# package-lock.json  # Uncomment to ignore
+# pnpm-lock.yaml
+# yarn.lock
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Cache directories
+.cache/
+.parcel-cache/
+.eslintcache
+.turbo/
+
+# Misc
+.crlfixed  # git-crlf fix marker
+.fleet  # Fleet IDE

@@ -7,13 +7,13 @@ import {
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 
-const contactInfo = [
-  {
-    icon: Mail,
-    title: 'Email',
-    value: 'hello@yourdomain.com',
-    href: 'mailto:hello@yourdomain.com',
-  },
+ const contactInfo = [
+   {
+     icon: Mail,
+     title: 'Email',
+     value: 'techsl9181@gmail.com',
+     href: 'mailto:techsl9181@gmail.com',
+   },
   {
     icon: Phone,
     title: 'Phone',
