@@ -88,7 +88,7 @@ const sections = [
     title: '10. Contact Information',
     content: [
       'If you have questions about these terms, please contact us.',
-      'Our legal team can be reached at legal@technova.com.',
+      'Our legal team can be reached at techsl9181@gmail.com.',
       'We will respond to your inquiry within 30 business days.',
     ],
   },

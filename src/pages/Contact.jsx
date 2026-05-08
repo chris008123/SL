@@ -11,19 +11,19 @@ const contactInfo = [
   {
     icon: Mail,
     title: 'Email',
-    value: 'hello@sl.com',
-    href: 'mailto:hello@sl.com',
+    value: 'hello@yourdomain.com',
+    href: 'mailto:hello@yourdomain.com',
   },
   {
     icon: Phone,
     title: 'Phone',
-    value: '+1 (234) 567-890',
-    href: 'tel:+1234567890',
+    value: '+233 53 455 5395, +233 54 764 5984',
+    href: 'tel:+233534555395',
   },
   {
     icon: MapPin,
     title: 'Office',
-    value: '123 Innovation Drive, San Francisco, CA 94105',
+    value: 'Unity Hall Street, Kumasi, Ghana',
     href: 'https://maps.google.com',
   },
   {
@@ -35,10 +35,10 @@ const contactInfo = [
 ]
 
 const socialLinks = [
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com' },
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com' },
-  { name: 'GitHub', icon: Github, href: 'https://github.com' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://www.linkedin.com/in/tech-sl-954995405/' },
+  { name: 'Twitter', icon: Twitter, href: 'https://x.com/TechSl72541/' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/techsl9181-hue/' },
+  { name: 'Instagram', icon: Instagram, href: 'https://www.instagram.com/techsl9181/' },
 ]
 
 const services = [

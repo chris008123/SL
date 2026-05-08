@@ -35,7 +35,6 @@ A production-ready, scalable, high-performance tech company website built with R
 | Animations | Framer Motion |
 | Routing | React Router DOM |
 | Icons | Lucide React |
-| Backend | Firebase (optional) |
 | Deployment | Vercel |
 
 ## 📁 Project Structure
@@ -65,8 +64,6 @@ tech-company-website/
 │   │   └── NotFound.jsx
 │   ├── context/
 │   │   └── ThemeContext.jsx   # Dark/light mode context
-│   ├── config/
-│   │   └── firebase.js        # Firebase configuration
 │   ├── App.jsx                # Main app with routing
 │   ├── main.jsx               # Entry point
 │   └── index.css              # Global styles & Tailwind
@@ -97,28 +94,12 @@ tech-company-website/
    npm install
    ```
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env
-   ```
-   
-   Edit `.env` with your configuration:
-   ```env
-   VITE_FIREBASE_API_KEY=your-api-key
-   VITE_FIREBASE_AUTH_DOMAIN=your-project.firebaseapp.com
-   VITE_FIREBASE_PROJECT_ID=your-project-id
-   VITE_FIREBASE_STORAGE_BUCKET=your-project.appspot.com
-   VITE_FIREBASE_MESSAGING_SENDER_ID=123456789
-   VITE_FIREBASE_APP_ID=1:123456789:web:abcdef
-   VITE_FIREBASE_MEASUREMENT_ID=G-XXXXXXXXXX
-   ```
-
-4. **Start development server**
+3. **Start development server**
    ```bash
    npm run dev
    ```
 
-5. **Open in browser**
+4. **Open in browser**
    Navigate to `http://localhost:3000`
 
 ### Building for Production
@@ -211,9 +192,6 @@ npm run build
 # Upload dist/ folder to your hosting provider
 ```
 
-### Environment Variables for Production
-Make sure to set all `VITE_FIREBASE_*` variables in your deployment platform.
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -233,7 +211,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Framer Motion](https://www.framer.com/motion/)
 - [Lucide Icons](https://lucide.dev/)
 - [Vercel](https://vercel.com/)
-- [Firebase](https://firebase.google.com/)
 
 ---
 

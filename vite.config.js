@@ -10,15 +10,6 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          animations: ['framer-motion'],
-          firebase: ['firebase/app', 'firebase/firestore', 'firebase/auth']
-        }
-      }
-    }
+    sourcemap: false
   }
 })

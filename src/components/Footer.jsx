@@ -33,10 +33,10 @@ const footerLinks = {
 }
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/sl' },
-  { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/sl' },
-  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/sl' },
-  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/sl' },
+  { name: 'GitHub', icon: Github, href: 'https://github.com/techsl9181-hue' },
+  { name: 'Twitter', icon: Twitter, href: 'https://x.com/TechSl72541/' },
+  { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/tech-sl-954995405/' },
+  { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/techsl9181/' },
 ]
 
 export default function Footer() {
@@ -88,17 +88,17 @@ export default function Footer() {
             
             {/* Contact Info */}
             <div className="space-y-3">
-              <a href="mailto:hello@sl.com" className="flex items-center space-x-2 text-dark-400 hover:text-primary-400 transition-colors duration-200">
+              <a href="mailto:hello@yourdomain.com" className="flex items-center space-x-2 text-dark-400 hover:text-primary-400 transition-colors duration-200">
                 <Mail className="w-4 h-4" />
-                <span>hello@sl.com</span>
+                <span>hello@yourdomain.com</span>
               </a>
-              <a href="tel:+1234567890" className="flex items-center space-x-2 text-dark-400 hover:text-primary-400 transition-colors duration-200">
+              <a href="tel:+233534555395, +233547645984" className="flex items-center space-x-2 text-dark-400 hover:text-primary-400 transition-colors duration-200">
                 <Phone className="w-4 h-4" />
-                <span>+1 (234) 567-890</span>
+                <span>+233 53 455 5395</span>
               </a>
               <div className="flex items-center space-x-2 text-dark-400">
                 <MapPin className="w-4 h-4" />
-                <span>San Francisco, CA</span>
+                <span>Unity Hall Street, Kumasi, Ghana</span>
               </div>
             </div>
           </div>

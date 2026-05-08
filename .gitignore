@@ -1,1 +1,6 @@
 node_modules/
+.env
+dist/
+PRODUCTION_TEMPLATE.md
+production-values.json
+changes.md

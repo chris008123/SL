@@ -1,9 +1,9 @@
-# TechNova Website - Robots.txt
+# SL Website - Robots.txt
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.technova.com/sitemap.xml
+Sitemap: https://sl.vercel.app/sitemap.xml
 
 # Disallow admin/private areas
 Disallow: /admin

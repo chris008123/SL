@@ -88,7 +88,7 @@ const sections = [
     title: '10. Contact Us',
     content: [
       'If you have questions about this privacy policy, please contact us.',
-      'Our Data Protection Officer can be reached at dpo@sl.com.',
+      'Our Data Protection Officer can be reached at joetibuah@gmail.com.',
       'We will respond to your inquiry within 30 days.',
     ],
   },
