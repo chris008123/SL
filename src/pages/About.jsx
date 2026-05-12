@@ -54,22 +54,22 @@ const team = [
   {
     name: 'Siisi Botwe',
     role: 'Senior Graphics Designer',
-    bio: 'Full-stack expert with background in fintech and healthcare technology.',
+    bio: 'Graphic design expert with background in fintech and healthcare technology.',
     avatar: 'SB',
   },
   {
     name: 'Joe Tibuah',
-    role: 'Junior Dev',
+    role: 'DPO',
     bio: 'Product leader with experience scaling products from 0 to 10M users.',
     avatar: 'JT',
   },
 ]
 
 const stats = [
-  { value: '150+', label: 'Team Members', icon: Users },
+  { value: '10+', label: 'Team Members', icon: Users },
   { value: '6', label: 'Global Offices', icon: Globe },
-  { value: '500+', label: 'Projects Delivered', icon: Award },
-  { value: '50+', label: 'Countries Served', icon: Globe },
+  { value: '50+', label: 'Projects Delivered', icon: Award },
+  { value: '50+', label: 'Companies Served', icon: Globe },
 ]
 
 export default function About() {
