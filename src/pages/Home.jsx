@@ -75,8 +75,8 @@ const services = [
 
 // Stats data
 const stats = [
-  { value: '50+', label: 'Projects Delivered' },
-  { value: '50+', label: 'Happy Clients' },
+  { value: '500+', label: 'Projects Delivered' },
+  { value: '150+', label: 'Happy Clients' },
   { value: '99.9%', label: 'Uptime SLA' },
   { value: '24/7', label: 'Support Available' },
 ]
@@ -138,7 +138,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* ── HERO ── */}
-      <section className="relative overflow-hidden bg-white dark:bg-dark-950 pt-20 pb-0 min-h-[calc(100vh-68px)] flex flex-col justify-center">
+      <section className="relative overflow-hidden bg-white dark:bg-dark-950 pt-16 lg:pt-20 pb-0 min-h-[calc(100vh-68px)] flex flex-col justify-center">
 
         {/* Very subtle dot grid texture — matches the mockup's white bg */}
         <div
@@ -171,7 +171,7 @@ export default function Home() {
               <motion.h1
                 variants={fadeInUp}
                 className="font-bold leading-[1.06] tracking-tight mb-6 text-dark-900 dark:text-white"
-                style={{ fontSize: 'clamp(40px, 5.5vw, 68px)' }}
+                style={{ fontSize: 'clamp(32px, 7vw, 68px)' }}
               >
                 Build the Future<br />
                 with{' '}
@@ -225,12 +225,32 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
+            {/* ── MOBILE illustration — shown below text on small screens ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
+              className="lg:hidden flex items-center justify-center w-full pb-8"
+            >
+              <img
+                src={heroIllustration}
+                alt="Tech team working with AI, cloud and data tools"
+                className="w-full object-contain"
+                style={{
+                  maxWidth: '420px',
+                  height: 'auto',
+                  mixBlendMode: 'multiply',
+                  filter: 'drop-shadow(0 12px 24px rgba(99,102,241,0.12))',
+                }}
+              />
+            </motion.div>
+
             {/* ── RIGHT — illustration column ── */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-              className="relative flex items-center justify-center self-stretch"
+              className="relative hidden lg:flex items-center justify-center self-stretch"
               style={{ minHeight: '520px' }}
             >
 
@@ -241,12 +261,12 @@ export default function Home() {
                 alt="Tech team working with AI, cloud and data tools"
                 className="relative w-full object-contain"
                 style={{
-                  maxWidth: '850px',
-                  width: '910%',
+                  maxWidth: '900px',
+                  width: '110%',
                   height: 'auto',
                   marginTop: '-80px',
                   marginBottom: '-40px',
-                  marginRight: '100px',
+                  marginRight: '-60px',
                   mixBlendMode: 'multiply',
                   filter: 'drop-shadow(0 20px 40px rgba(99,102,241,0.15))',
                 }}
@@ -307,7 +327,7 @@ export default function Home() {
       {/* Stats Bar */}
       <section className="py-10 border-y border-dark-100 dark:border-dark-800 bg-dark-50/40 dark:bg-dark-900/40">
         <div className="container-custom">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {[
               { icon: Users,    value: '500+', label: 'Projects Delivered' },
               { icon: Star,     value: '300+', label: 'Happy Clients' },
@@ -320,7 +340,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-center gap-4 bg-white dark:bg-dark-900 rounded-2xl border border-dark-100 dark:border-dark-800 px-5 py-4"
+                className="flex items-center gap-3 bg-white dark:bg-dark-900 rounded-2xl border border-dark-100 dark:border-dark-800 px-3 py-3 md:px-5 md:py-4"
               >
                 <div className="w-11 h-11 rounded-xl bg-primary-50 dark:bg-primary-900/20 flex items-center justify-center flex-shrink-0">
                   <item.icon className="w-5 h-5 text-primary-600 dark:text-primary-400" />
