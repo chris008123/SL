@@ -266,7 +266,7 @@ export default function Home() {
                   height: 'auto',
                   marginTop: '-80px',
                   marginBottom: '-40px',
-                  marginRight: '-60px',
+                  marginRight: '0px',
                   mixBlendMode: 'multiply',
                   filter: 'drop-shadow(0 20px 40px rgba(99,102,241,0.15))',
                 }}
