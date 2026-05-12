@@ -261,8 +261,8 @@ export default function Home() {
                 alt="Tech team working with AI, cloud and data tools"
                 className="relative w-full object-contain"
                 style={{
-                  maxWidth: '900px',
-                  width: '110%',
+                  maxWidth: '1000px',
+                  width: '130%',
                   height: 'auto',
                   marginTop: '-80px',
                   marginBottom: '-40px',
