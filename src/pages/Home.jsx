@@ -6,6 +6,7 @@ import {
 } from 'lucide-react'
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
+import heroIllustration from '../assets/hero-illustration.png'
 
 // Animation variants
 const fadeInUp = {
@@ -136,130 +137,206 @@ const products = [
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-primary-500/10 via-transparent to-transparent rounded-full blur-3xl" />
-          <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-tr from-accent-500/10 via-transparent to-transparent rounded-full blur-3xl" />
-        </div>
+      {/* ── HERO ── */}
+      <section className="relative overflow-hidden bg-white dark:bg-dark-950 pt-20 pb-0 min-h-[calc(100vh-68px)] flex flex-col justify-center">
+
+        {/* Very subtle dot grid texture — matches the mockup's white bg */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-40 dark:opacity-10"
+          style={{
+            backgroundImage: 'radial-gradient(circle, #c7d2fe 1px, transparent 1px)',
+            backgroundSize: '32px 32px',
+          }}
+        />
 
         <div className="container-custom relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-            {/* Left Content */}
-            <motion.div 
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-0">
+
+            {/* ── LEFT ── */}
+            <motion.div
               initial="initial"
               animate="animate"
               variants={staggerContainer}
-              className="flex-1 text-center lg:text-left"
+              className="py-12 text-center lg:text-left"
             >
+              {/* Badge */}
               <motion.div variants={fadeInUp} className="mb-6">
-                <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400">
-                  <Zap className="w-4 h-4 mr-2" />
+                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200 dark:border-primary-700 bg-white dark:bg-dark-900 text-primary-600 dark:text-primary-400 shadow-sm">
+                  <Zap className="w-3.5 h-3.5" />
                   Next-Generation Technology
                 </span>
               </motion.div>
-              
-              <motion.h1 variants={fadeInUp} className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-dark-900 dark:text-white mb-6 leading-tight">
-                Build the Future with{' '}
-                <span className="gradient-text">Innovative Tech</span>
+
+              {/* Headline — matches mockup weight & size */}
+              <motion.h1
+                variants={fadeInUp}
+                className="font-bold leading-[1.06] tracking-tight mb-6 text-dark-900 dark:text-white"
+                style={{ fontSize: 'clamp(40px, 5.5vw, 68px)' }}
+              >
+                Build the Future<br />
+                with{' '}
+                <span className="gradient-text">Innovative</span>
+                <br />
+                <span className="gradient-text">Tech</span>
               </motion.h1>
-              
-              <motion.p variants={fadeInUp} className="text-lg md:text-xl text-dark-600 dark:text-dark-400 mb-8 max-w-2xl mx-auto lg:mx-0">
-                We craft cutting-edge software solutions that transform businesses. 
-                From AI to cloud infrastructure, we deliver the technology of tomorrow, today.
+
+              {/* Body */}
+              <motion.p
+                variants={fadeInUp}
+                className="text-base md:text-lg text-dark-500 dark:text-dark-400 mb-8 max-w-[420px] mx-auto lg:mx-0 leading-relaxed"
+              >
+                We craft cutting-edge software solutions that transform
+                businesses. From AI to cloud infrastructure, we deliver the
+                technology of tomorrow, today.
               </motion.p>
-              
-              <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                <Link to="/contact" className="btn-primary w-full sm:w-auto">
+
+              {/* CTAs */}
+              <motion.div
+                variants={fadeInUp}
+                className="flex flex-col sm:flex-row items-center gap-3 justify-center lg:justify-start mb-10"
+              >
+                <Link
+                  to="/contact"
+                  className="btn-primary w-full sm:w-auto flex items-center justify-center gap-2"
+                >
                   Get Started
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link to="/products" className="btn-secondary w-full sm:w-auto">
-                  <Play className="mr-2 w-5 h-5" />
+                <Link
+                  to="/products"
+                  className="btn-secondary w-full sm:w-auto flex items-center justify-center gap-2"
+                >
+                  <Play className="w-4 h-4" />
                   View Products
                 </Link>
               </motion.div>
 
-              {/* Trust Badges */}
-              <motion.div variants={fadeInUp} className="mt-12 flex flex-wrap items-center justify-center lg:justify-start gap-6 text-dark-500 dark:text-dark-400">
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-primary-500 mr-2" />
-                  <span className="text-sm">Free Consultation</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-primary-500 mr-2" />
-                  <span className="text-sm"> NDA Protected</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="w-5 h-5 text-primary-500 mr-2" />
-                  <span className="text-sm">24/7 Support</span>
-                </div>
+              {/* Trust row */}
+              <motion.div
+                variants={fadeInUp}
+                className="flex flex-wrap items-center gap-6 justify-center lg:justify-start"
+              >
+                {['100% Satisfaction', 'NDA Protected', '24/7 Support'].map((t) => (
+                  <span key={t} className="flex items-center gap-1.5 text-sm text-dark-500 dark:text-dark-400">
+                    <CheckCircle className="w-4 h-4 text-primary-500 flex-shrink-0" />
+                    {t}
+                  </span>
+                ))}
               </motion.div>
             </motion.div>
 
-            {/* Right Content - Hero Image/Graphic */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex-1 relative"
+            {/* ── RIGHT — illustration column ── */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+              className="relative flex items-center justify-center self-stretch"
+              style={{ minHeight: '520px' }}
             >
-              <div className="relative w-full aspect-square lg:aspect-auto lg:h-[600px]">
-                {/* Floating Cards */}
-                <motion.div 
-                  animate={{ y: [0, -20, 0] }}
-                  transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-0 right-0 lg:right-10 glass-card p-6 shadow-xl"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 rounded-full gradient-bg flex items-center justify-center">
-                      <Code className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-dark-900 dark:text-white">Web Development</p>
-                      <p className="text-sm text-dark-500 dark:text-dark-400">React & Node.js</p>
-                    </div>
-                  </div>
-                </motion.div>
 
-                <motion.div 
-                  animate={{ y: [0, 15, 0] }}
-                  transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                  className="absolute bottom-20 left-0 lg:left-10 glass-card p-6 shadow-xl"
-                >
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-accent-500 to-purple-600 flex items-center justify-center">
-                      <Cpu className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-semibold text-dark-900 dark:text-white">AI Solutions</p>
-                      <p className="text-sm text-dark-500 dark:text-dark-400">Machine Learning</p>
-                    </div>
-                  </div>
-                </motion.div>
 
-                <motion.div 
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-                  className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 glass-card p-8 shadow-2xl"
-                >
-                  <div className="text-center">
-                    <div className="w-20 h-20 mx-auto rounded-full gradient-bg flex items-center justify-center mb-4">
-                      <Zap className="w-10 h-10 text-white" />
-                    </div>
-                    <p className="font-bold text-xl text-dark-900 dark:text-white">500+</p>
-                    <p className="text-dark-500 dark:text-dark-400">Projects Delivered</p>
-                  </div>
-                </motion.div>
-              </div>
+              {/* Illustration — enlarged, overflows column for bold background presence */}
+              <img
+                src={heroIllustration}
+                alt="Tech team working with AI, cloud and data tools"
+                className="relative w-full object-contain"
+                style={{
+                  maxWidth: '850px',
+                  width: '910%',
+                  height: 'auto',
+                  marginTop: '-80px',
+                  marginBottom: '-40px',
+                  marginRight: '100px',
+                  mixBlendMode: 'multiply',
+                  filter: 'drop-shadow(0 20px 40px rgba(99,102,241,0.15))',
+                }}
+              />
+
+              {/* ── Floating card: Web Development — top right ── */}
+              <motion.div
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+                className="absolute top-[8%] right-[0%] bg-white dark:bg-dark-900 rounded-2xl shadow-lg border border-dark-100 dark:border-dark-700 px-4 py-3 flex items-center gap-3 z-20"
+              >
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center flex-shrink-0">
+                  <Code className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-dark-900 dark:text-white leading-tight">Web Development</p>
+                  <p className="text-xs text-dark-400 dark:text-dark-500">React &amp; Node.js</p>
+                </div>
+              </motion.div>
+
+              {/* ── Floating card: AI Solutions — bottom left ── */}
+              <motion.div
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                className="absolute bottom-[18%] left-[0%] bg-white dark:bg-dark-900 rounded-2xl shadow-lg border border-dark-100 dark:border-dark-700 px-4 py-3 flex items-center gap-3 z-20"
+              >
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                  <Cpu className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-dark-900 dark:text-white leading-tight">AI Solutions</p>
+                  <p className="text-xs text-dark-400 dark:text-dark-500">Machine Learning</p>
+                </div>
+              </motion.div>
+
+              {/* ── Floating card: 500+ Projects — bottom right ── */}
+              <motion.div
+                animate={{ y: [0, -9, 0] }}
+                transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.6 }}
+                className="absolute bottom-[8%] right-[0%] bg-white dark:bg-dark-900 rounded-2xl shadow-lg border border-dark-100 dark:border-dark-700 px-4 py-3 flex items-center gap-3 z-20"
+              >
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center flex-shrink-0">
+                  <Zap className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <p className="text-base font-bold text-dark-900 dark:text-white leading-tight">500+</p>
+                  <p className="text-xs text-dark-400 dark:text-dark-500">Projects Delivered</p>
+                </div>
+              </motion.div>
+
             </motion.div>
+            {/* ── END RIGHT ── */}
+
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Bar */}
+      <section className="py-10 border-y border-dark-100 dark:border-dark-800 bg-dark-50/40 dark:bg-dark-900/40">
+        <div className="container-custom">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { icon: Users,    value: '500+', label: 'Projects Delivered' },
+              { icon: Star,     value: '300+', label: 'Happy Clients' },
+              { icon: Zap,      value: '10+',  label: 'Years Experience' },
+              { icon: Shield,   value: '50+',  label: 'Tech Experts' },
+            ].map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex items-center gap-4 bg-white dark:bg-dark-900 rounded-2xl border border-dark-100 dark:border-dark-800 px-5 py-4"
+              >
+                <div className="w-11 h-11 rounded-xl bg-primary-50 dark:bg-primary-900/20 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-5 h-5 text-primary-600 dark:text-primary-400" />
+                </div>
+                <div>
+                  <p className="text-2xl font-bold text-dark-900 dark:text-white leading-tight">{item.value}</p>
+                  <p className="text-xs text-dark-500 dark:text-dark-400">{item.label}</p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Trusted By Section */}
-      <section className="py-12 border-y border-dark-100 dark:border-dark-800">
+      <section className="py-12 border-b border-dark-100 dark:border-dark-800">
         <div className="container-custom">
           <p className="text-center text-sm font-semibold text-dark-500 dark:text-dark-400 mb-8">
             TRUSTED BY INNOVATIVE COMPANIES WORLDWIDE
@@ -308,7 +385,7 @@ export default function Home() {
                 <ul className="space-y-2">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-dark-500 dark:text-dark-400">
-                      <CheckCircle className="w-4 h-4 text-primary-500 mr-2" />
+                      <CheckCircle className="w-4 h-4 text-primary-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -368,18 +445,11 @@ export default function Home() {
                 className="group relative bg-white dark:bg-dark-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-dark-100 dark:border-dark-800 overflow-hidden"
               >
                 <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${product.color} opacity-10 rounded-full blur-2xl transform translate-x-10 -translate-y-10`} />
-                
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center mb-6`}>
                   <product.icon className="w-8 h-8 text-white" />
                 </div>
-                
-                <h3 className="text-xl font-bold text-dark-900 dark:text-white mb-2">
-                  {product.name}
-                </h3>
-                <p className="text-dark-600 dark:text-dark-400 mb-4">
-                  {product.description}
-                </p>
-                
+                <h3 className="text-xl font-bold text-dark-900 dark:text-white mb-2">{product.name}</h3>
+                <p className="text-dark-600 dark:text-dark-400 mb-4">{product.description}</p>
                 <Link 
                   to="/products" 
                   className="inline-flex items-center text-primary-600 dark:text-primary-400 font-semibold group-hover:underline"
@@ -404,7 +474,6 @@ export default function Home() {
                 subtitle="We're not just developers – we're strategic partners invested in your success"
                 align="left"
               />
-
               <div className="space-y-6">
                 {[
                   { title: 'Cutting-Edge Technology', desc: 'We use the latest frameworks and tools to deliver future-proof solutions.' },
@@ -466,7 +535,6 @@ export default function Home() {
             title="What Our Clients Say"
             subtitle="Don't just take our word for it – hear from the companies we've helped transform"
           />
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card key={testimonial.author} delay={index * 0.1}>
@@ -496,8 +564,6 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute inset-0 gradient-bg opacity-5" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMGE1ZTkiIGZpbGwtb3BhY2l0eT0iMC4xIj48cGF0aCBkPSJNMzYgMzRjMC0yIDItNCAyLTRzLTItMi00LTJjMCAwLTItMi0yLTRzMi00IDItNCAyIDIgNCAyczQtMiA0LTJjMCAwIDItMiAyLTRzMi00IDItNCAyIDIgNCAyczQtMiA0LTJjMCAwIDItMiAyLTRzMi00IDItNHMtMi0yLTQtMmMwIDAtMi0yLTItNHMyLTQgMi00czItMiA0LTJjMCAwIDItMiAyLTRzMi00IDItNHMtMi0yLTQtMmMwIDAtMi0yLTItNHMyLTQgMi00czItMiA0LTJjMCAwIDItMiAyLTRzMi00IDItNHoiLz48L2c+PC9zdmc+')] opacity-30" />
-        
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
