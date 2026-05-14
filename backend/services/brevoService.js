@@ -155,3 +155,40 @@ export async function getContact(email) {
     throw err
   }
 }
+
+/**
+ * Send contact form email to site owner via Brevo transactional email.
+ */
+export async function sendContactEmail({ name, email, company, service, budget, message }) {
+  const ownerEmail = process.env.CONTACT_RECEIVER_EMAIL
+  const senderEmail = process.env.CONTACT_SENDER_EMAIL
+  const senderName = process.env.CONTACT_SENDER_NAME || 'TechSL Website'
+
+  if (!ownerEmail || !senderEmail) {
+    throw new Error('CONTACT_RECEIVER_EMAIL and CONTACT_SENDER_EMAIL must be set in .env')
+  }
+
+  const htmlContent = `
+    <h2>New Contact Form Submission</h2>
+    <table style="border-collapse:collapse;width:100%">
+      <tr><td><strong>Name:</strong></td><td>${name}</td></tr>
+      <tr><td><strong>Email:</strong></td><td>${email}</td></tr>
+      <tr><td><strong>Company:</strong></td><td>${company || 'N/A'}</td></tr>
+      <tr><td><strong>Service:</strong></td><td>${service}</td></tr>
+      <tr><td><strong>Budget:</strong></td><td>${budget || 'Not specified'}</td></tr>
+    </table>
+    <h3>Message:</h3>
+    <p>${message.replace(/\n/g, '<br/>')}</p>
+  `
+
+  return await brevoRequest('/smtp/email', {
+    method: 'POST',
+    body: JSON.stringify({
+      sender: { name: senderName, email: senderEmail },
+      to: [{ email: ownerEmail }],
+      replyTo: { email, name },
+      subject: `New Inquiry from ${name} — ${service}`,
+      htmlContent,
+    }),
+  })
+}

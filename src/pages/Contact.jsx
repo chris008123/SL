@@ -61,12 +61,35 @@ export default function Contact() {
     message: '',
   })
   const [submitted, setSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState(null)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
-    setSubmitted(true)
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:3001'}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok) {
+        throw new Error(
+          data.errors ? data.errors.join(', ') : data.message || 'Failed to send'
+        )
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setError(err.message || 'Something went wrong. Please try again.')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -227,26 +250,30 @@ export default function Contact() {
                         </div>
                       </div>
 
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
-                          Project Details *
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          required
-                          rows={5}
-                          className="w-full px-4 py-3 rounded-lg bg-dark-50 dark:bg-dark-800 border border-dark-200 dark:border-dark-700 text-dark-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors resize-none"
-                          placeholder="Tell us about your project, goals, and timeline..."
-                        />
-                      </div>
+                       <div>
+                         <label htmlFor="message" className="block text-sm font-medium text-dark-700 dark:text-dark-300 mb-2">
+                           Project Details *
+                         </label>
+                         <textarea
+                           id="message"
+                           name="message"
+                           value={formData.message}
+                           onChange={handleChange}
+                           required
+                           rows={5}
+                           className="w-full px-4 py-3 rounded-lg bg-dark-50 dark:bg-dark-800 border border-dark-200 dark:border-dark-700 text-dark-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 transition-colors resize-none"
+                           placeholder="Tell us about your project, goals, and timeline..."
+                         />
+                       </div>
 
-                      <button type="submit" className="btn-primary w-full md:w-auto">
-                        Send Message
-                        <Send className="ml-2 w-5 h-5" />
-                      </button>
+                       {error && (
+                         <p className="text-red-500 text-sm">{error}</p>
+                       )}
+
+                       <button type="submit" disabled={isLoading} className="btn-primary w-full md:w-auto">
+                         {isLoading ? 'Sending...' : 'Send Message'}
+                         <Send className="ml-2 w-5 h-5" />
+                       </button>
                     </form>
                   </>
                 )}

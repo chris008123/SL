@@ -7,7 +7,7 @@
 import { Router } from 'express'
 import Joi from 'joi'
 import rateLimit from 'express-rate-limit'
-import { subscribeEmail, unsubscribeEmail } from '../services/brevoService.js'
+import { subscribeEmail, unsubscribeEmail, sendContactEmail } from '../services/brevoService.js'
 
 const router = Router()
 
@@ -184,6 +184,54 @@ router.delete('/unsubscribe', async (req, res) => {
       message: 'Unable to unsubscribe. Please try again later.',
     })
   }
+})
+
+// ── Validation Schemas ─────────────────────────────────────────────────────────
+const contactSchema = Joi.object({
+  name: Joi.string().trim().min(2).max(100).required(),
+  email: Joi.string().email({ tlds: { allow: false } }).trim().lowercase().required(),
+  company: Joi.string().allow('', null).optional(),
+  service: Joi.string().required(),
+  budget: Joi.string().allow('', null).optional(),
+  message: Joi.string().trim().min(10).max(2000).required().messages({
+    'string.min': 'Please provide more detail (at least 10 characters).',
+    'string.empty': 'Project details are required.',
+  }),
+})
+
+// ── POST /api/contact ─────────────────────────────────────────────────────────
+router.post('/contact', subscriptionRateLimiter, async (req, res) => {
+  console.log('📩 Contact form body:', req.body) // ADD THIS LINE
+
+  const { error, value } = contactSchema.validate(req.body, {
+    abortEarly: false,
+    stripUnknown: true,
+  })
+
+  if (error) {
+    console.log('❌ Validation errors:', error.details) // ADD THIS LINE
+    return res.status(400).json({
+      success: false,
+      message: 'Validation failed.',
+      errors: error.details.map((d) => d.message),
+    })
+  }
+
+try {
+     const result = await sendContactEmail(value)
+     console.log('✅ Email API response:', JSON.stringify(result, null, 2))
+     res.status(200).json({
+       success: true,
+       message: 'Message sent successfully!',
+     })
+   } catch (err) {
+     console.error('❌ Contact form error:', err.message)
+     console.error('❌ Full error:', JSON.stringify(err.response?.body, null, 2))
+     res.status(500).json({
+       success: false,
+       message: 'Failed to send message. Please try again later.',
+     })
+   }
 })
 
 export default router
