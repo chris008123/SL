@@ -201,15 +201,12 @@ const contactSchema = Joi.object({
 
 // ── POST /api/contact ─────────────────────────────────────────────────────────
 router.post('/contact', subscriptionRateLimiter, async (req, res) => {
-  console.log('📩 Contact form body:', req.body) // ADD THIS LINE
-
   const { error, value } = contactSchema.validate(req.body, {
     abortEarly: false,
     stripUnknown: true,
   })
 
   if (error) {
-    console.log('❌ Validation errors:', error.details) // ADD THIS LINE
     return res.status(400).json({
       success: false,
       message: 'Validation failed.',
@@ -217,21 +214,19 @@ router.post('/contact', subscriptionRateLimiter, async (req, res) => {
     })
   }
 
-try {
-     const result = await sendContactEmail(value)
-     console.log('✅ Email API response:', JSON.stringify(result, null, 2))
-     res.status(200).json({
-       success: true,
-       message: 'Message sent successfully!',
-     })
-   } catch (err) {
-     console.error('❌ Contact form error:', err.message)
-     console.error('❌ Full error:', JSON.stringify(err.response?.body, null, 2))
-     res.status(500).json({
-       success: false,
-       message: 'Failed to send message. Please try again later.',
-     })
-   }
+  try {
+    await sendContactEmail(value)
+    res.status(200).json({
+      success: true,
+      message: 'Message sent successfully!',
+    })
+  } catch (err) {
+    console.error('❌ Contact form error:', err.message)
+    res.status(500).json({
+      success: false,
+      message: 'Failed to send message. Please try again later.',
+    })
+  }
 })
 
 export default router
