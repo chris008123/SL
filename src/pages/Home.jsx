@@ -75,8 +75,8 @@ const services = [
 
 // Stats data
 const stats = [
-  { value: '500+', label: 'Projects Delivered' },
-  { value: '150+', label: 'Happy Clients' },
+  { value: '50+', label: 'Projects Delivered' },
+  { value: '50+', label: 'Happy Clients' },
   { value: '99.9%', label: 'Uptime SLA' },
   { value: '24/7', label: 'Support Available' },
 ]

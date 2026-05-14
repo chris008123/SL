@@ -46,7 +46,7 @@ const team = [
     avatar: 'CA',
   },
   {
-    name: 'Michael Agyenim Boateng Aning',
+    name: 'Michael Agyenim Boateng Anning',
     role: 'Co-Founder',
     bio: 'AI researcher and former Microsoft architect specializing in cloud scalability.',
     avatar: 'MABA',
@@ -60,8 +60,26 @@ const team = [
   {
     name: 'Joe Tibuah',
     role: 'DPO',
-    bio: 'Product leader with experience scaling products from 0 to 10M users.',
+    bio: 'Compliance lead expert in "Privacy by Design" for digital services, ensuring innovation meets rigorous security standards.',
     avatar: 'JT',
+  },
+  {
+    name: 'Kaf Makaty',
+    role: 'Financial Manager',
+    bio: 'Corporate finance expert with a background in fintech growth and capital management.',
+    avatar: 'KM',
+  },
+  {
+    name: 'Chris Appiah Jnr',
+    role: 'Trading Manager',
+    bio: 'Market operations expert with a background in high-frequency trading environments.',
+    avatar: 'CAJ',
+  },
+  {
+    name: 'Francis Amewoyi Walker ',
+    role: 'Junior Dev',
+    bio: 'Software engineer specializing in Python and django with a focus on creating efficient, clean-code solutions.',
+    avatar: 'FAW',
   },
 ]
 

@@ -340,9 +340,9 @@ export default function Contact() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { city: 'San Francisco', address: '123 Innovation Drive, CA 94105', timezone: 'PST (UTC-8)' },
-              { city: 'New York', address: '456 Tech Avenue, NY 10001', timezone: 'EST (UTC-5)' },
-              { city: 'London', address: '789 Innovation Blvd, EC1A 1BB', timezone: 'GMT (UTC+0)' },
+              { city: 'Accra', address: '', timezone: '(GMT)' },
+              { city: 'Kumasi', address: '', timezone: '(GMT)' },
+              
             ].map((office, index) => (
               <motion.div
                 key={office.city}
