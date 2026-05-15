@@ -312,7 +312,7 @@ export default function Home() {
                   <Zap className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-base font-bold text-dark-900 dark:text-white leading-tight">500+</p>
+                  <p className="text-base font-bold text-dark-900 dark:text-white leading-tight">50+</p>
                   <p className="text-xs text-dark-400 dark:text-dark-500">Projects Delivered</p>
                 </div>
               </motion.div>
@@ -329,10 +329,10 @@ export default function Home() {
         <div className="container-custom">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
             {[
-              { icon: Users,    value: '500+', label: 'Projects Delivered' },
-              { icon: Star,     value: '300+', label: 'Happy Clients' },
-              { icon: Zap,      value: '10+',  label: 'Years Experience' },
-              { icon: Shield,   value: '50+',  label: 'Tech Experts' },
+              { icon: Users,    value: '50+', label: 'Projects Delivered' },
+              { icon: Star,     value: '50+', label: 'Happy Clients' },
+              { icon: Zap,      value: '5+',  label: 'Years Experience' },
+              { icon: Shield,   value: '15+',  label: 'Tech Experts' },
             ].map((item, index) => (
               <motion.div
                 key={item.label}
