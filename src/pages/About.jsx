@@ -58,6 +58,12 @@ const team = [
     avatar: 'SB',
   },
   {
+    name: 'Tracy Baffoe',
+    role: 'General Secretary',
+    bio: 'Dedicated operations and administration professional responsible for coordinating meetings, maintaining corporate records, managing internal communications, and ensuring smooth organizational workflows that support the company’s growth and success.',
+    avatar: 'TB',
+  },
+  {
     name: 'Joe Tibuah',
     role: 'DPO',
     bio: 'Compliance lead expert in "Privacy by Design" for digital services, ensuring innovation meets rigorous security standards.',
