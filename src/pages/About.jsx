@@ -42,13 +42,13 @@ const team = [
   {
     name: 'Chris Aidoo',
     role: 'Co-Founder',
-    bio: 'Former Google engineer with 15+ years of experience in distributed systems.',
+    bio: '',
     avatar: 'CA',
   },
   {
     name: 'Michael Agyenim Boateng Anning',
     role: 'Co-Founder',
-    bio: 'AI researcher and former Microsoft architect specializing in cloud scalability.',
+    bio: '',
     avatar: 'MABA',
   },
   {
