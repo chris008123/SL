@@ -163,7 +163,7 @@ export default function Home() {
               <motion.div variants={fadeInUp} className="mb-6">
                 <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200 dark:border-primary-700 bg-white dark:bg-dark-900 text-primary-600 dark:text-primary-400 shadow-sm">
                   <Zap className="w-3.5 h-3.5" />
-                  Next-Generation Technology
+                  Next-Generation Technology.
                 </span>
               </motion.div>
 
