@@ -32,7 +32,7 @@ const values = [
 const milestones = [
   { year: '2025', title: 'Founded', description: 'Started with a team of 5 passionate developers.' },
   { year: '2025', title: 'First Enterprise Client', description: 'Signed our first Fortune 500 company.' },
-  { year: '2026', title: 'Global Expansion', description: 'Opened offices in Accra and Kumasi.' },
+  { year: '2026', title: 'Expansion', description: 'Opened offices in Accra and Kumasi.' },
   { year: '2026', title: '50+ Projects', description: 'Reached milestone of 50 completed projects.' },
   { year: '2026', title: 'AI Division Launched', description: 'Started dedicated AI and ML practice.' },
   { year: '2026', title: 'Series A Funding', description: 'Raised ₵15k to accelerate growth.' },

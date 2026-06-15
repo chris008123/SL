@@ -46,7 +46,7 @@ const openPositions = [
     title: 'Senior Frontend Engineer',
     location: 'Remote',
     type: 'Full-time',
-    salary: '$140K - $180K',
+    salary: '₵140K - ₵180K',
     tags: ['React', 'TypeScript', 'Next.js'],
   },
   {
@@ -54,7 +54,7 @@ const openPositions = [
     title: 'Backend Engineer',
     location: 'San Francisco, CA',
     type: 'Full-time',
-    salary: '$150K - $190K',
+    salary: '₵150K - ₵190K',
     tags: ['Node.js', 'Python', 'PostgreSQL'],
   },
   {
@@ -62,7 +62,7 @@ const openPositions = [
     title: 'DevOps Engineer',
     location: 'Remote',
     type: 'Full-time',
-    salary: '$130K - $170K',
+    salary: '₵130K - ₵170K',
     tags: ['AWS', 'Kubernetes', 'Terraform'],
   },
   {
@@ -70,7 +70,7 @@ const openPositions = [
     title: 'Machine Learning Engineer',
     location: 'New York, NY',
     type: 'Full-time',
-    salary: '$160K - $200K',
+    salary: '₵160K - ₵200K',
     tags: ['Python', 'TensorFlow', 'PyTorch'],
   },
   {
@@ -78,7 +78,7 @@ const openPositions = [
     title: 'Senior UX Designer',
     location: 'Remote',
     type: 'Full-time',
-    salary: '$120K - $150K',
+    salary: '₵120K - ₵150K',
     tags: ['Figma', 'User Research', 'Prototyping'],
   },
   {
@@ -86,7 +86,7 @@ const openPositions = [
     title: 'Product Manager',
     location: 'London, UK',
     type: 'Full-time',
-    salary: '$130K - $170K',
+    salary: '₵130K - ₵170K',
     tags: ['Strategy', 'Analytics', 'Agile'],
   },
 ]
@@ -135,7 +135,7 @@ export default function Careers() {
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '150+', label: 'Team Members' },
+              { value: '10+', label: 'Team Members' },
               { value: '25+', label: 'Countries' },
               { value: '4.9/5', label: 'Glassdoor Rating' },
               { value: '95%', label: 'Employee Retention' },
