@@ -7,6 +7,7 @@ import {
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 import heroIllustration from '../assets/hero-illustration.png'
+import HeroBackground from '../components/HeroBackground'
 
 // Animation variants
 const fadeInUp = {
@@ -139,7 +140,7 @@ export default function Home() {
     <div className="min-h-screen">
       {/* ── HERO ── */}
       <section className="relative overflow-hidden bg-white dark:bg-dark-950 pt-16 lg:pt-20 pb-0 min-h-[calc(100vh-68px)] flex flex-col justify-center">
-
+        <HeroBackground />
         {/* Very subtle dot grid texture — matches the mockup's white bg */}
         <div
           className="absolute inset-0 pointer-events-none opacity-40 dark:opacity-10"

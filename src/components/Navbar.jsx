@@ -44,12 +44,9 @@ export default function Navbar({ scrolled }) {
       <nav className="container-custom">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">SL</span>
-            </div>
+          <Link to="/" className="flex items-center space-x-5">
+            <img src='/favicon.svg' alt="Logo" className="h-11 w-9" />
             <span className="font-display font-bold text-xl text-dark-900 dark:text-white">
-              SL
             </span>
           </Link>
 
