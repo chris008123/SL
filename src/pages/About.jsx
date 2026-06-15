@@ -30,12 +30,12 @@ const values = [
 ]
 
 const milestones = [
-  { year: '2018', title: 'Founded', description: 'Started with a team of 5 passionate developers.' },
-  { year: '2019', title: 'First Enterprise Client', description: 'Signed our first Fortune 500 company.' },
-  { year: '2020', title: 'Global Expansion', description: 'Opened offices in Europe and Asia.' },
-  { year: '2021', title: '100+ Projects', description: 'Reached milestone of 100 completed projects.' },
-  { year: '2022', title: 'AI Division Launched', description: 'Started dedicated AI and ML practice.' },
-  { year: '2023', title: 'Series A Funding', description: 'Raised $15M to accelerate growth.' },
+  { year: '2025', title: 'Founded', description: 'Started with a team of 5 passionate developers.' },
+  { year: '2025', title: 'First Enterprise Client', description: 'Signed our first Fortune 500 company.' },
+  { year: '2026', title: 'Global Expansion', description: 'Opened offices in Accra and Kumasi.' },
+  { year: '2026', title: '50+ Projects', description: 'Reached milestone of 50 completed projects.' },
+  { year: '2026', title: 'AI Division Launched', description: 'Started dedicated AI and ML practice.' },
+  { year: '2026', title: 'Series A Funding', description: 'Raised ₵15k to accelerate growth.' },
 ]
 
 const team = [
@@ -116,7 +116,7 @@ export default function About() {
               <span className="gradient-text">Technology</span>
             </h1>
             <p className="text-lg md:text-xl text-dark-600 dark:text-dark-400">
-              We're a team of passionate technologists dedicated to transforming businesses through innovative software solutions. Since 2018, we've been helping companies across the globe embrace the future.
+              We're a team of passionate technologists dedicated to transforming businesses through innovative software solutions. Since 2025, we've been helping companies across the globe embrace the future.
             </p>
           </motion.div>
         </div>
