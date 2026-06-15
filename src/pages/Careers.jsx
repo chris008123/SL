@@ -52,7 +52,7 @@ const openPositions = [
   {
     department: 'Engineering',
     title: 'Backend Engineer',
-    location: 'San Francisco, CA',
+    location: 'Accra, Ghana',
     type: 'Full-time',
     salary: '₵150K - ₵190K',
     tags: ['Node.js', 'Python', 'PostgreSQL'],
@@ -68,7 +68,7 @@ const openPositions = [
   {
     department: 'AI/ML',
     title: 'Machine Learning Engineer',
-    location: 'New York, NY',
+    location: 'Kumasi, Ghana',
     type: 'Full-time',
     salary: '₵160K - ₵200K',
     tags: ['Python', 'TensorFlow', 'PyTorch'],
@@ -84,7 +84,7 @@ const openPositions = [
   {
     department: 'Product',
     title: 'Product Manager',
-    location: 'London, UK',
+    location: 'Accra, Ghana',
     type: 'Full-time',
     salary: '₵130K - ₵170K',
     tags: ['Strategy', 'Analytics', 'Agile'],
