@@ -233,7 +233,7 @@ export default function Contact() {
                           Project Budget
                         </label>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                          {['$10K - $25K', '$25K - $50K', '$50K - $100K', '$100K+'].map((budget) => (
+                          {['₵2K - ₵5K', '₵5K - ₵10K', '₵10K - ₵50K', '₵50k - ₵100K','₵100K+'].map((budget) => (
                             <label key={budget} className="cursor-pointer">
                               <input
                                 type="radio"
