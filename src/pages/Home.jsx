@@ -7,7 +7,7 @@ import {
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 import heroIllustration from '../assets/hero-illustration.png'
-import HeroBackground from '../components/HeroBackground'
+//import HeroBackground from '../components/HeroBackground'
 
 // Animation variants
 const fadeInUp = {
@@ -41,36 +41,42 @@ const services = [
     title: 'Web & Mobile Development',
     description: 'Custom applications built with modern frameworks for seamless user experiences across all devices.',
     features: ['React & Next.js', 'React Native', 'Progressive Web Apps', 'API Integration'],
+    color: 'bg-amber-500',       // warm amber — craft/build
   },
   {
     icon: Cpu,
     title: 'AI & Machine Learning',
     description: 'Intelligent solutions powered by advanced algorithms to automate and optimize your business processes.',
     features: ['Neural Networks', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
+    color: 'bg-violet-600',      // deep violet — intelligence
   },
   {
     icon: Cloud,
     title: 'Cloud Solutions',
     description: 'Scalable infrastructure and deployment strategies that grow with your business needs.',
     features: ['AWS & Azure', 'Serverless Architecture', 'DevOps & CI/CD', 'Containerization'],
+    color: 'bg-sky-500',         // sky blue — cloud
   },
   {
     icon: Shield,
     title: 'Cybersecurity',
     description: 'Comprehensive protection for your digital assets with enterprise-grade security measures.',
     features: ['Penetration Testing', 'Compliance Audits', 'Security Monitoring', 'Incident Response'],
+    color: 'bg-red-500',         // red — protection/alert
   },
   {
     icon: BarChart3,
     title: 'Data Analytics',
     description: 'Transform raw data into actionable insights with advanced visualization and reporting tools.',
     features: ['Business Intelligence', 'Real-time Dashboards', 'Data Warehousing', 'Predictive Modeling'],
+    color: 'bg-emerald-500',     // green — growth/data
   },
   {
     icon: Globe,
     title: 'Digital Transformation',
     description: 'Modernize your operations with cutting-edge technology and strategic digital initiatives.',
     features: ['Process Automation', 'Legacy Migration', 'Digital Strategy', 'Change Management'],
+    color: 'bg-orange-500',      // orange — momentum/change
   },
 ]
 
@@ -135,12 +141,12 @@ const products = [
   },
 ]
 
+
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* ── HERO ── */}
       <section className="relative overflow-hidden bg-white dark:bg-dark-950 pt-16 lg:pt-20 pb-0 min-h-[calc(100vh-68px)] flex flex-col justify-center">
-        <HeroBackground />
         {/* Very subtle dot grid texture — matches the mockup's white bg */}
         <div
           className="absolute inset-0 pointer-events-none opacity-40 dark:opacity-10"
@@ -160,13 +166,7 @@ export default function Home() {
               variants={staggerContainer}
               className="py-12 text-center lg:text-left"
             >
-              {/* Badge */}
-              <motion.div variants={fadeInUp} className="mb-6">
-                <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold border border-primary-200 dark:border-primary-700 bg-white dark:bg-dark-900 text-primary-600 dark:text-primary-400 shadow-sm">
-                  <Zap className="w-3.5 h-3.5" />
-                  Next-Generation Technology.
-                </span>
-              </motion.div>
+              
 
               {/* Headline — matches mockup weight & size */}
               <motion.h1
@@ -394,7 +394,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
               <Card key={service.title} hover={true} delay={index * 0.1}>
-                <div className="w-14 h-14 rounded-xl gradient-bg flex items-center justify-center mb-6">
+                <div className={`w-14 h-14 rounded-xl ${service.color} flex items-center justify-center mb-6`}>
                   <service.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-dark-900 dark:text-white mb-3">
@@ -425,20 +425,25 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 gradient-bg">
+      <section className="py-20 bg-dark-50 dark:bg-dark-950 border-y border-dark-100 dark:border-dark-800">
         <div className="container-custom">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { value: '50+',   label: 'Projects Delivered', accent: 'text-amber-400',  border: 'border-amber-500/30',  bg: 'bg-amber-500/10' },
+              { value: '50+',   label: 'Happy Clients',       accent: 'text-sky-400',    border: 'border-sky-500/30',    bg: 'bg-sky-500/10' },
+              { value: '99.9%', label: 'Uptime SLA',           accent: 'text-emerald-400',border: 'border-emerald-500/30',bg: 'bg-emerald-500/10' },
+              { value: '24/7',  label: 'Support Available',    accent: 'text-violet-400', border: 'border-violet-500/30', bg: 'bg-violet-500/10' },
+            ].map((stat, index) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center"
+                className={`rounded-2xl border ${stat.border} ${stat.bg} px-6 py-8 text-center`}
               >
-                <p className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.value}</p>
-                <p className="text-primary-100">{stat.label}</p>
+                <p className={`text-4xl md:text-5xl font-bold mb-2 ${stat.accent}`}>{stat.value}</p>
+                <p className="text-dark-400 text-sm">{stat.label}</p>
               </motion.div>
             ))}
           </div>
