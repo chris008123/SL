@@ -17,9 +17,11 @@
     #f97316 0%,    /* orange */
     #fdba74 10%,   /* light orange — shimmer glint */
     #f97316 20%,
+    #a39a49 30%,
     #3b82f6 40%,   /* blue */
     #93c5fd 50%,   /* light blue — shimmer glint */
     #3b82f6 60%,
+    #d48fe6 70%,
     #22c55e 80%,   /* green */
     #86efac 90%,   /* light green — shimmer glint */
     #22c55e 100%
@@ -34,7 +36,7 @@
 
   animation: shimmer-cycle 6s linear infinite;
   /* Fallback color in case background-clip: text isn't supported */
-  background-color: #f97316;
+  background-color: #1671f9;
 }
 
 @keyframes shimmer-cycle {
