@@ -1,0 +1,58 @@
+/* ============================================================
+   HERO HEADLINE — SHIMMERING COLOR-CYCLE TEXT
+   Scoped to the "Innovative" / "Tech" headline spans on the
+   Home page hero. Import this file once in Home.jsx:
+
+     import './HeroShimmerText.css'
+
+   Then apply the class to the spans:
+
+     <span className="shimmer-text">Innovative</span>
+     <span className="shimmer-text">Tech</span>
+   ============================================================ */
+
+.shimmer-text {
+  background-image: linear-gradient(
+    90deg,
+    #f97316 0%,    /* orange */
+    #fdba74 8%,    /* light orange — shimmer glint */
+    #f97316 16%,
+    #3b82f6 32%,   /* blue */
+    #93c5fd 40%,   /* light blue — shimmer glint */
+    #3b82f6 48%,
+    #22c55e 64%,   /* green */
+    #86efac 72%,   /* light green — shimmer glint */
+    #22c55e 80%,
+    #a855f7 92%,   /* purple */
+    #d8b4fe 96%,   /* light purple — shimmer glint */
+    #a855f7 100%
+  );
+  background-size: 300% auto;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  animation: shimmer-cycle 8s linear infinite;
+  /* Fallback color in case background-clip: text isn't supported */
+  background-color: #508fca;
+}
+
+@keyframes shimmer-cycle {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Respect users who've asked for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-text {
+    animation: none;
+    background-position: 0% 50%;
+  }
+}

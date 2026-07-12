@@ -537,7 +537,7 @@ export default function Home() {
                     <div className="shimmer-tile shimmer-tile-green rounded-2xl flex items-center justify-center">
                       <Cloud className="w-12 h-12 text-white" />
                     </div>
-                    <div className="shimmer-tile shimmer-tile-multi rounded-2xl flex items-center justify-center">
+                    <div className="shimmer-tile shimmer-tile-purple rounded-2xl flex items-center justify-center">
                       <Shield className="w-12 h-12 text-white" />
                     </div>
                   </div>
