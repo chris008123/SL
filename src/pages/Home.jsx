@@ -8,6 +8,7 @@ import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 import HeroIllustration from '../components/HeroIllustration'
 import './HeroShimmerText.css'
+import './decorativeblock.css'
 
 // Animation variants
 const fadeInUp = {
@@ -527,17 +528,17 @@ export default function Home() {
                 <div className="absolute inset-0 gradient-bg opacity-10 rounded-3xl transform rotate-3" />
                 <div className="absolute inset-0 bg-white dark:bg-dark-900 rounded-3xl shadow-2xl p-8">
                   <div className="grid grid-cols-2 gap-4 h-full">
-                    <div className="bg-dark-50 dark:bg-dark-800 rounded-2xl flex items-center justify-center">
-                      <Code className="w-12 h-12 text-primary-500" />
+                    <div className="shimmer-tile shimmer-tile-orange rounded-2xl flex items-center justify-center">
+                      <Code className="w-12 h-12 text-white" />
                     </div>
-                    <div className="bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center">
+                    <div className="shimmer-tile shimmer-tile-blue rounded-2xl flex items-center justify-center">
                       <Cpu className="w-12 h-12 text-white" />
                     </div>
-                    <div className="bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
+                    <div className="shimmer-tile shimmer-tile-green rounded-2xl flex items-center justify-center">
                       <Cloud className="w-12 h-12 text-white" />
                     </div>
-                    <div className="bg-dark-900 dark:bg-dark-800 rounded-2xl flex items-center justify-center">
-                      <Shield className="w-12 h-12 text-primary-500" />
+                    <div className="shimmer-tile shimmer-tile-multi rounded-2xl flex items-center justify-center">
+                      <Shield className="w-12 h-12 text-white" />
                     </div>
                   </div>
                 </div>

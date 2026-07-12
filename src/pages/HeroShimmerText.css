@@ -34,7 +34,7 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
 
-  animation: shimmer-cycle 6s linear infinite;
+  animation: shimmer-cycle 10s linear infinite;
   /* Fallback color in case background-clip: text isn't supported */
   background-color: #1671f9;
 }
