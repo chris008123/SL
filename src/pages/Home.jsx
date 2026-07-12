@@ -267,13 +267,13 @@ export default function Home() {
                 }}
               />
 
-              {/* ── Floating card: Web Development — top right ── */}
+              {/* ── Floating card: Web Development — top right — ORANGE ── */}
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                 className="absolute top-[8%] right-[0%] bg-white dark:bg-dark-900 rounded-2xl shadow-lg border border-dark-100 dark:border-dark-700 px-4 py-3 flex items-center gap-3 z-20"
               >
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center flex-shrink-0">
                   <Code className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -282,13 +282,13 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* ── Floating card: AI Solutions — bottom left ── */}
+              {/* ── Floating card: AI Solutions — bottom left — BLUE ── */}
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
                 className="absolute bottom-[18%] left-[0%] bg-white dark:bg-dark-900 rounded-2xl shadow-lg border border-dark-100 dark:border-dark-700 px-4 py-3 flex items-center gap-3 z-20"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-accent-500 to-purple-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center flex-shrink-0">
                   <Cpu className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -297,13 +297,13 @@ export default function Home() {
                 </div>
               </motion.div>
 
-              {/* ── Floating card: 500+ Projects — bottom right ── */}
+              {/* ── Floating card: 500+ Projects — bottom right — GREEN ── */}
               <motion.div
                 animate={{ y: [0, -9, 0] }}
                 transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay: 0.6 }}
                 className="absolute bottom-[8%] right-[0%] bg-white dark:bg-dark-900 rounded-2xl shadow-lg border border-dark-100 dark:border-dark-700 px-4 py-3 flex items-center gap-3 z-20"
               >
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center flex-shrink-0">
                   <Zap className="w-5 h-5 text-white" />
                 </div>
                 <div>
