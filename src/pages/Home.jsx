@@ -7,6 +7,7 @@ import {
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 import HeroIllustration from '../components/HeroIllustration'
+import './HeroShimmerText.css'
 
 // Animation variants
 const fadeInUp = {
@@ -175,9 +176,9 @@ export default function Home() {
               >
                 Build the Future<br />
                 with{' '}
-                <span className="text-orange-500 dark:text-orange-400">Innovative</span>
+                <span className="shimmer-text">Innovative</span>
                 <br />
-                <span className="text-orange-500 dark:text-orange-400">Tech</span>
+                <span className="shimmer-text">Tech</span>
               </motion.h1>
 
               {/* Body */}
