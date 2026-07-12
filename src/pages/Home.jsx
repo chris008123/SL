@@ -6,7 +6,7 @@ import {
 } from 'lucide-react'
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
-import heroIllustration from '../assets/hero-illustration.png'
+import HeroIllustration from '../components/HeroIllustration'
 //import HeroBackground from '../components/HeroBackground'
 
 // Animation variants
@@ -233,14 +233,11 @@ export default function Home() {
               transition={{ duration: 0.7, ease: 'easeOut', delay: 0.3 }}
               className="lg:hidden flex items-center justify-center w-full pb-8"
             >
-              <img
-                src={heroIllustration}
-                alt="Tech team working with AI, cloud and data tools"
+              <HeroIllustration
                 className="w-full object-contain"
                 style={{
                   maxWidth: '420px',
                   height: 'auto',
-                  mixBlendMode: 'multiply',
                   filter: 'drop-shadow(0 12px 24px rgba(99,102,241,0.12))',
                 }}
               />
@@ -257,9 +254,7 @@ export default function Home() {
 
 
               {/* Illustration — enlarged, overflows column for bold background presence */}
-              <img
-                src={heroIllustration}
-                alt="Tech team working with AI, cloud and data tools"
+              <HeroIllustration
                 className="relative w-full object-contain"
                 style={{
                   maxWidth: '1000px',
@@ -268,7 +263,6 @@ export default function Home() {
                   marginTop: '-80px',
                   marginBottom: '-40px',
                   marginRight: '0px',
-                  mixBlendMode: 'multiply',
                   filter: 'drop-shadow(0 20px 40px rgba(99,102,241,0.15))',
                 }}
               />
