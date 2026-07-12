@@ -1,0 +1,90 @@
+/* ============================================================
+   "WHY SL" DECORATIVE ICON GRID — 4-COLOR THEMED SHIMMER TILES
+   Scoped to the 2x2 icon tiles in the Why Choose Us section.
+   Import once in Home.jsx:
+
+     import './WhySLShimmer.css'
+
+   Then apply to each tile div (in addition to existing classes):
+
+     shimmer-tile shimmer-tile-orange
+     shimmer-tile shimmer-tile-blue
+     shimmer-tile shimmer-tile-green
+     shimmer-tile shimmer-tile-purple
+   ============================================================ */
+
+/* Base: every themed tile needs relative + hidden overflow
+   so the sweeping highlight stays clipped to the tile shape. */
+.shimmer-tile {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sweeping light streak — a diagonal highlight that slides
+   across the tile on a loop. Works on any solid/gradient bg. */
+.shimmer-tile::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.45) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  animation: shimmer-sweep 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    left: -150%;
+  }
+  60% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Stagger the sweeps slightly so all 4 tiles don't flash in unison */
+.shimmer-tile-blue::after {
+  animation-delay: 0.5s;
+}
+.shimmer-tile-green::after {
+  animation-delay: 1s;
+}
+.shimmer-tile-purple::after {
+  animation-delay: 1.6s;
+}
+
+/* ── Themed static gradients (single hue each, matches
+   shimmer-text stops) ── */
+.shimmer-tile-orange {
+  background: linear-gradient(135deg, #fb923c 0%, #ea580c 100%);
+}
+
+.shimmer-tile-blue {
+  background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+}
+
+.shimmer-tile-green {
+  background: linear-gradient(135deg, #4ade80 0%, #16a34a 100%);
+}
+
+.shimmer-tile-purple {
+  background: linear-gradient(135deg, #c084fc 0%, #9333ea 100%);
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .shimmer-tile::after {
+    animation: none;
+    display: none;
+  }
+}
