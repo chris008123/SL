@@ -7,7 +7,6 @@ import {
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 import HeroIllustration from '../components/HeroIllustration'
-//import HeroBackground from '../components/HeroBackground'
 
 // Animation variants
 const fadeInUp = {
@@ -176,9 +175,9 @@ export default function Home() {
               >
                 Build the Future<br />
                 with{' '}
-                <span className="gradient-text">Innovative</span>
+                <span className="text-orange-500 dark:text-orange-400">Innovative</span>
                 <br />
-                <span className="gradient-text">Tech</span>
+                <span className="text-orange-500 dark:text-orange-400">Tech</span>
               </motion.h1>
 
               {/* Body */}
