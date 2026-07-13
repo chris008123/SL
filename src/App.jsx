@@ -8,14 +8,14 @@ import Services from './pages/Services'
 import Products from './pages/Products'
 import Careers from './pages/Careers'
 import Blog from './pages/Blog'
-import BlogPost from './pages/BlogPost'   // line added at top
+import BlogPost from './pages/BlogPost'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Unsubscribe from './pages/Unsubscribe'
 import NotFound from './pages/NotFound'
-import { Analytics } from "@vercel/analytics/next"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 function App() {
   const location = useLocation()
@@ -36,7 +36,7 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:id" element={<BlogPost />} />  // line added in Routes
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
@@ -44,6 +44,8 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
+      <Analytics />
+      <SpeedInsights />
     </ThemeProvider>
   )
 }
