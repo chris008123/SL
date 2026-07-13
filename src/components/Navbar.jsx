@@ -48,7 +48,7 @@ const pillVariants = {
 
 const heightVariants = {
   top: { height: 88 },
-  scrolled: { height: 68 },
+  scrolled: { height: 48 },
 }
 
 const logoVariants = {
