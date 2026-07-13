@@ -14,6 +14,8 @@ import Privacy from './pages/Privacy'
 import Terms from './pages/Terms'
 import Unsubscribe from './pages/Unsubscribe'
 import NotFound from './pages/NotFound'
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   const location = useLocation()
