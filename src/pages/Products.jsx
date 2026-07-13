@@ -8,6 +8,91 @@ import {
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 
+// --- New: "Our Work" showcase data ---
+const showcaseFilters = ['All', 'Website', 'Mobile App', 'SaaS', 'Dashboard']
+
+const showcaseStats = [
+  { value: '10+', label: 'Projects Delivered' },
+  { value: '98%', label: 'Client Satisfaction' },
+  { value: '6+', label: 'Happy Clients' },
+  { value: '2+', label: 'Years Building' },
+]
+
+const featuredProject = {
+  id: 'sl-hub',
+  name: 'SL Hub',
+  category: 'Mobile App',
+  description: 'A community platform for tech builders, built with a custom dark-themed UI system. Live stats, push notification infrastructure, notification/email digests, and a restricted admin panel keep the community informed and organized.',
+  tech: ['React Native', 'Expo Router', 'Supabase', 'Zustand'],
+  color: 'from-blue-500 to-cyan-500',
+  icon: Smartphone,
+  stats: {
+    builders: '100+',
+    uptime: '99.9%',
+    build: '8 weeks',
+  },
+  liveUrl: '#',
+  caseStudyUrl: '#',
+}
+
+const showcaseProjects = [
+  {
+    id: 'tutorly',
+    name: 'Tutorly',
+    category: 'SaaS',
+    description: 'A Q&A web platform connecting developers with tutors for real-time help and mentorship.',
+    tech: ['React', 'Supabase', 'TailwindCSS'],
+    color: 'from-purple-500 to-pink-500',
+    icon: Users,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'atlas-nexus',
+    name: 'Atlas Nexus',
+    category: 'Dashboard',
+    description: 'A modular knowledge management app with a full light/dark theme system built on CSS custom properties.',
+    tech: ['React', 'TypeScript', 'Framer Motion'],
+    color: 'from-green-500 to-teal-500',
+    icon: Database,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'knust-mindspace',
+    name: 'KNUST MindSpace',
+    category: 'Website',
+    description: 'A mental wellness platform for students, with moderated, safe community discussions.',
+    tech: ['React', 'TypeScript', 'Supabase'],
+    color: 'from-indigo-500 to-purple-500',
+    icon: Shield,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'partnersup',
+    name: 'PartnerSup',
+    category: 'Mobile App',
+    description: 'A partnership record tracking app engineered for reliability across a wide range of Android devices.',
+    tech: ['React Native', 'Expo'],
+    color: 'from-yellow-500 to-orange-500',
+    icon: Smartphone,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'skillmap',
+    name: 'SkillMap',
+    category: 'Dashboard',
+    description: 'A department and role-matching tool used to onboard and organize new team members automatically.',
+    tech: ['React', 'Groq API', 'Netlify Functions'],
+    color: 'from-red-500 to-pink-500',
+    icon: BarChart3,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+]
+
 const products = [
   {
     id: 'cloudflow',
@@ -188,90 +273,6 @@ const integrations = [
   { name: 'Figma', icon: Globe },
 ]
 
-// --- New: "Our Work" showcase data ---
-const showcaseFilters = ['All', 'Website', 'Mobile App', 'SaaS', 'Dashboard']
-
-const showcaseStats = [
-  { value: '10+', label: 'Projects Delivered' },
-  { value: '98%', label: 'Client Satisfaction' },
-  { value: '6+', label: 'Happy Clients' },
-  { value: '2+', label: 'Years Building' },
-]
-
-const featuredProject = {
-  id: 'sl-hub',
-  name: 'SL Hub',
-  category: 'Mobile App',
-  description: 'A community platform for tech builders, built with a custom dark-themed UI system. Live stats, push notification infrastructure, notification/email digests, and a restricted admin panel keep the community informed and organized.',
-  tech: ['React Native', 'Expo Router', 'Supabase', 'Zustand'],
-  color: 'from-blue-500 to-cyan-500',
-  icon: Smartphone,
-  stats: {
-    builders: '100+',
-    uptime: '99.9%',
-    build: '8 weeks',
-  },
-  liveUrl: '#',
-  caseStudyUrl: '#',
-}
-
-const showcaseProjects = [
-  {
-    id: 'tutorly',
-    name: 'Tutorly',
-    category: 'SaaS',
-    description: 'A Q&A web platform connecting developers with tutors for real-time help and mentorship.',
-    tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-purple-500 to-pink-500',
-    icon: Users,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-  {
-    id: 'atlas-nexus',
-    name: 'Atlas Nexus',
-    category: 'Dashboard',
-    description: 'A modular knowledge management app with a full light/dark theme system built on CSS custom properties.',
-    tech: ['React', 'TypeScript', 'Framer Motion'],
-    color: 'from-green-500 to-teal-500',
-    icon: Database,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-  {
-    id: 'knust-mindspace',
-    name: 'KNUST MindSpace',
-    category: 'Website',
-    description: 'A mental wellness platform for students, with moderated, safe community discussions.',
-    tech: ['React', 'TypeScript', 'Supabase'],
-    color: 'from-indigo-500 to-purple-500',
-    icon: Shield,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-  {
-    id: 'partnersup',
-    name: 'PartnerSup',
-    category: 'Mobile App',
-    description: 'A partnership record tracking app engineered for reliability across a wide range of Android devices.',
-    tech: ['React Native', 'Expo'],
-    color: 'from-yellow-500 to-orange-500',
-    icon: Smartphone,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-  {
-    id: 'skillmap',
-    name: 'SkillMap',
-    category: 'Dashboard',
-    description: 'A department and role-matching tool used to onboard and organize new team members automatically.',
-    tech: ['React', 'Groq API', 'Netlify Functions'],
-    color: 'from-red-500 to-pink-500',
-    icon: BarChart3,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-]
 
 export default function Products() {
   const [activeFilter, setActiveFilter] = useState('All')
