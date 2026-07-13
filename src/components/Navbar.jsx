@@ -48,7 +48,7 @@ const pillVariants = {
 
 const heightVariants = {
   top: { height: 88 },
-  scrolled: { height: 28 },
+  scrolled: { height: 68 },
 }
 
 const logoVariants = {
@@ -99,11 +99,7 @@ export default function Navbar({ scrolled }) {
               }`}
             />
             <span
-              className={`font-display font-bold text-xl transition-colors duration-300 ${
-                scrolled
-                  ? 'text-dark-900 dark:text-white'
-                  : 'text-white'
-              }`}
+              className="font-display font-bold text-xl text-dark-900 dark:text-white transition-colors duration-300"
             />
           </Link>
 
@@ -124,10 +120,10 @@ export default function Navbar({ scrolled }) {
                       isActive
                         ? scrolled
                           ? 'text-primary-400'
-                          : 'text-white'
+                          : 'text-primary-600 dark:text-primary-400'
                         : scrolled
                           ? 'text-dark-300 hover:text-white'
-                          : 'text-white/70 hover:text-white'
+                          : 'text-dark-600 dark:text-dark-300 hover:text-dark-900 dark:hover:text-white'
                     }`}
                   >
                     {link.name}
@@ -142,7 +138,9 @@ export default function Navbar({ scrolled }) {
                   {isActive && (
                     <motion.div
                       layoutId="activeIndicator"
-                      className="absolute inset-0 rounded-full bg-white/10 backdrop-blur-sm"
+                      className={`absolute inset-0 rounded-full backdrop-blur-sm ${
+                        scrolled ? 'bg-white/10' : 'bg-dark-900/5 dark:bg-white/10'
+                      }`}
                       transition={{ type: 'spring', stiffness: 380, damping: 32 }}
                     />
                   )}
@@ -151,7 +149,9 @@ export default function Navbar({ scrolled }) {
                   {!isActive && activeDropdown === link.name && (
                     <motion.div
                       layoutId="hoverIndicator"
-                      className="absolute inset-0 rounded-full bg-white/5"
+                      className={`absolute inset-0 rounded-full ${
+                        scrolled ? 'bg-white/5' : 'bg-dark-900/5 dark:bg-white/5'
+                      }`}
                       transition={{ type: 'spring', stiffness: 380, damping: 32 }}
                     />
                   )}
@@ -208,7 +208,7 @@ export default function Navbar({ scrolled }) {
               className={`p-2 rounded-full transition-colors duration-300 ${
                 scrolled
                   ? 'text-dark-300 hover:bg-white/10'
-                  : 'text-white/80 hover:bg-white/10'
+                  : 'text-dark-600 dark:text-dark-300 hover:bg-dark-900/5 dark:hover:bg-white/10'
               }`}
               aria-label="Toggle theme"
             >
@@ -238,7 +238,7 @@ export default function Navbar({ scrolled }) {
               className={`p-2 rounded-full transition-colors duration-300 ${
                 scrolled
                   ? 'text-dark-300 hover:bg-white/10'
-                  : 'text-white/80 hover:bg-white/10'
+                  : 'text-dark-600 dark:text-dark-300 hover:bg-dark-900/5 dark:hover:bg-white/10'
               }`}
               aria-label="Toggle theme"
             >
@@ -250,7 +250,7 @@ export default function Navbar({ scrolled }) {
               className={`p-2 rounded-full transition-colors duration-300 ${
                 scrolled
                   ? 'text-dark-300 hover:bg-white/10'
-                  : 'text-white/80 hover:bg-white/10'
+                  : 'text-dark-600 dark:text-dark-300 hover:bg-dark-900/5 dark:hover:bg-white/10'
               }`}
               aria-label="Toggle menu"
             >
