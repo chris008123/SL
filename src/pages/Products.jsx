@@ -219,6 +219,18 @@ const featuredProject = {
 
 const showcaseProjects = [
   {
+    id: 'ecommerce',
+    name: 'E-commerce',
+    category: 'SaaS',
+    description: 'A web platform  for real-time buying of products.',
+    tech: ['React', 'Supabase', 'TailwindCSS'],
+    color: 'from-green-500 to-teal-500',
+    icon: Users,
+    image: '/images/projects/e-commerce.png', // e.g. '/images/projects/tutorly.png'
+    liveUrl: 'tutorly-frontend-blue.vercel.app',
+    caseStudyUrl: '#',
+  },
+  {
     id: 'tutorly',
     name: 'Tutorly',
     category: 'SaaS',
@@ -236,7 +248,7 @@ const showcaseProjects = [
     category: 'SaaS',
     description: 'A web platform connecting university students with real-time video and connection.',
     tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-white-500 to-blue-500',
+    color: 'from-blue-500 to-cyan-300',
     icon: Users,
     image: '/images/projects/Uni-cam.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: 'uni-cam.vercel.app',
