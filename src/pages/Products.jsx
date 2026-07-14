@@ -224,7 +224,7 @@ const showcaseProjects = [
     category: 'SaaS',
     description: 'A web app engineered for keeping musical scripts.',
     tech: ['React', 'TypeScript', 'Framer Motion'],
-    color: 'from-dark-green to-lime-green-500',
+    color: 'bg-gradient-to-r from-green-800 via-green-600 to-lime-500',
     icon: Smartphone,
     image: '/images/projects/miuzicly.png', // e.g. '/images/projects/partnersup.png'
     liveUrl: 'miuzicly.vercel.app',
@@ -248,7 +248,7 @@ const showcaseProjects = [
     category: 'SaaS',
     description: 'A web platform for real-time buying of products.',
     tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-maroon-900 to-crimson-800',
+    color: 'from-rose-950 to-red-700',
     icon: Users,
     image: '/images/projects/rabi.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: 'rabireigns.vercel.app',
