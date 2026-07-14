@@ -1,11 +1,97 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { 
   Cloud, Cpu, Zap, Shield, BarChart3, Globe, ArrowRight, CheckCircle,
   Star, Download, ExternalLink, Clock, TrendingUp, Lock, Users, Server,
-  Database, Smartphone, Mail, MessageSquare 
+  Database, Smartphone, Mail, MessageSquare, Search, FileText
 } from 'lucide-react'
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
+
+// --- New: "Our Work" showcase data ---
+const showcaseFilters = ['All', 'Website', 'Mobile App', 'SaaS', 'Dashboard']
+
+const showcaseStats = [
+  { value: '10+', label: 'Projects Delivered' },
+  { value: '98%', label: 'Client Satisfaction' },
+  { value: '6+', label: 'Happy Clients' },
+  { value: '2+', label: 'Years Building' },
+]
+
+const featuredProject = {
+  id: 'sl-hub',
+  name: 'SL Hub',
+  category: 'Mobile App',
+  description: 'A community platform for tech builders, built with a custom dark-themed UI system. Live stats, push notification infrastructure, notification/email digests, and a restricted admin panel keep the community informed and organized.',
+  tech: ['React Native', 'Expo Router', 'Supabase', 'Zustand'],
+  color: 'from-blue-500 to-cyan-500',
+  icon: Smartphone,
+  stats: {
+    builders: '100+',
+    uptime: '99.9%',
+    build: '8 weeks',
+  },
+  liveUrl: '#',
+  caseStudyUrl: '#',
+}
+
+const showcaseProjects = [
+  {
+    id: 'tutorly',
+    name: 'Tutorly',
+    category: 'SaaS',
+    description: 'A Q&A web platform connecting developers with tutors for real-time help and mentorship.',
+    tech: ['React', 'Supabase', 'TailwindCSS'],
+    color: 'from-purple-500 to-pink-500',
+    icon: Users,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'atlas-nexus',
+    name: 'Atlas Nexus',
+    category: 'Dashboard',
+    description: 'A modular knowledge management app with a full light/dark theme system built on CSS custom properties.',
+    tech: ['React', 'TypeScript', 'Framer Motion'],
+    color: 'from-green-500 to-teal-500',
+    icon: Database,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'knust-mindspace',
+    name: 'KNUST MindSpace',
+    category: 'Website',
+    description: 'A mental wellness platform for students, with moderated, safe community discussions.',
+    tech: ['React', 'TypeScript', 'Supabase'],
+    color: 'from-indigo-500 to-purple-500',
+    icon: Shield,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'partnersup',
+    name: 'PartnerSup',
+    category: 'Mobile App',
+    description: 'A partnership record tracking app engineered for reliability across a wide range of Android devices.',
+    tech: ['React Native', 'Expo'],
+    color: 'from-yellow-500 to-orange-500',
+    icon: Smartphone,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'skillmap',
+    name: 'SkillMap',
+    category: 'Dashboard',
+    description: 'A department and role-matching tool used to onboard and organize new team members automatically.',
+    tech: ['React', 'Groq API', 'Netlify Functions'],
+    color: 'from-red-500 to-pink-500',
+    icon: BarChart3,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+]
 
 const products = [
   {
@@ -187,7 +273,17 @@ const integrations = [
   { name: 'Figma', icon: Globe },
 ]
 
+
 export default function Products() {
+  const [activeFilter, setActiveFilter] = useState('All')
+  const [searchQuery, setSearchQuery] = useState('')
+
+  const filteredProjects = showcaseProjects.filter((project) => {
+    const matchesFilter = activeFilter === 'All' || project.category === activeFilter
+    const matchesSearch = project.name.toLowerCase().includes(searchQuery.toLowerCase())
+    return matchesFilter && matchesSearch
+  })
+
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
@@ -337,8 +433,212 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Roadmap Section */}
+      {/* ============================= */}
+      {/* NEW: Our Work / Featured Projects Section */}
+      {/* Placed above the Roadmap ("Coming Soon") section, reusing the same */}
+      {/* Card / SectionHeading / motion / gradient patterns used elsewhere on this page */}
+      {/* ============================= */}
       <section className="section-padding">
+        <div className="container-custom">
+          <SectionHeading 
+            badge="Our Work"
+            title="Projects We've Built"
+            subtitle="Every product below represents a unique challenge solved with thoughtful design and modern engineering."
+          />
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {showcaseStats.map((stat, index) => (
+              <motion.div
+                key={stat.label}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="text-center px-4 py-6 rounded-xl bg-dark-50 dark:bg-dark-800"
+              >
+                <p className="text-3xl md:text-4xl font-bold text-dark-900 dark:text-white mb-1">{stat.value}</p>
+                <p className="text-sm text-dark-500 dark:text-dark-400">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Filters + Search */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {showcaseFilters.map((filter) => (
+                <button
+                  key={filter}
+                  onClick={() => setActiveFilter(filter)}
+                  className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
+                    activeFilter === filter
+                      ? 'bg-primary-600 text-white'
+                      : 'bg-dark-50 dark:bg-dark-800 text-dark-600 dark:text-dark-400 hover:bg-dark-100 dark:hover:bg-dark-700'
+                  }`}
+                >
+                  {filter}
+                </button>
+              ))}
+            </div>
+
+            <div className="relative w-full md:w-64">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-dark-400" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Search projects..."
+                className="w-full pl-10 pr-4 py-2 rounded-lg border border-dark-200 dark:border-dark-700 bg-white dark:bg-dark-900 text-dark-700 dark:text-dark-300 text-sm focus:outline-none focus:ring-2 focus:ring-primary-500"
+              />
+            </div>
+          </div>
+
+          {/* Featured Project (spans two columns) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-8"
+          >
+            <Card className="relative overflow-hidden">
+              <div className={`absolute top-0 right-0 w-80 h-80 bg-gradient-to-br ${featuredProject.color} opacity-10 rounded-full blur-3xl transform translate-x-24 -translate-y-24`} />
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative">
+                {/* Mock browser thumbnail */}
+                <div className="rounded-xl overflow-hidden border border-dark-200 dark:border-dark-700 shadow-lg">
+                  <div className="flex items-center gap-1.5 px-4 py-3 bg-dark-100 dark:bg-dark-800">
+                    <span className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                  </div>
+                  <div className={`h-64 bg-gradient-to-br ${featuredProject.color} flex items-center justify-center`}>
+                    <featuredProject.icon className="w-20 h-20 text-white/80" />
+                  </div>
+                </div>
+
+                <div className="flex flex-col justify-center">
+                  <span className="inline-flex items-center w-fit px-3 py-1 rounded-full text-xs font-semibold bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 mb-4">
+                    Featured &middot; {featuredProject.category}
+                  </span>
+                  <h3 className="text-3xl font-bold text-dark-900 dark:text-white mb-4">{featuredProject.name}</h3>
+                  <p className="text-dark-600 dark:text-dark-400 mb-6">{featuredProject.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {featuredProject.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 rounded-full text-xs font-medium bg-dark-50 dark:bg-dark-800 text-dark-600 dark:text-dark-400"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-wrap gap-4 mb-6">
+                    {Object.entries(featuredProject.stats).map(([key, value]) => (
+                      <div key={key} className="px-4 py-2 bg-dark-50 dark:bg-dark-800 rounded-lg">
+                        <p className="text-lg font-bold text-dark-900 dark:text-white">{value}</p>
+                        <p className="text-xs text-dark-500 dark:text-dark-400 capitalize">{key}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={featuredProject.liveUrl}
+                      className={`flex-1 py-3 rounded-lg bg-gradient-to-r ${featuredProject.color} text-white font-semibold hover:shadow-lg transition-shadow flex items-center justify-center`}
+                    >
+                      Visit Live Website
+                      <ExternalLink className="ml-2 w-4 h-4" />
+                    </a>
+                    <a
+                      href={featuredProject.caseStudyUrl}
+                      className="px-6 py-3 rounded-lg border border-dark-200 dark:border-dark-700 text-dark-700 dark:text-dark-300 font-semibold hover:bg-dark-50 dark:hover:bg-dark-800 transition-colors flex items-center justify-center"
+                    >
+                      <FileText className="w-4 h-4 mr-2" />
+                      Case Study
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </motion.div>
+
+          {/* Remaining Projects Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+                className="group"
+              >
+                <Card className="h-full relative overflow-hidden transition-transform duration-300 group-hover:-translate-y-1">
+                  <div className={`absolute top-0 right-0 w-48 h-48 bg-gradient-to-br ${project.color} opacity-5 rounded-full blur-2xl transform translate-x-16 -translate-y-16`} />
+
+                  {/* Thumbnail */}
+                  <div className="rounded-lg overflow-hidden border border-dark-200 dark:border-dark-700 mb-5">
+                    <div className="flex items-center gap-1.5 px-3 py-2 bg-dark-100 dark:bg-dark-800">
+                      <span className="w-2 h-2 rounded-full bg-red-400" />
+                      <span className="w-2 h-2 rounded-full bg-yellow-400" />
+                      <span className="w-2 h-2 rounded-full bg-green-400" />
+                    </div>
+                    <div className={`h-36 bg-gradient-to-br ${project.color} flex items-center justify-center transition-transform duration-500 group-hover:scale-105`}>
+                      <project.icon className="w-12 h-12 text-white/80" />
+                    </div>
+                  </div>
+
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 mb-3">
+                    {project.category}
+                  </span>
+
+                  <h3 className="text-xl font-bold text-dark-900 dark:text-white mb-2">{project.name}</h3>
+                  <p className="text-sm text-dark-600 dark:text-dark-400 mb-4">{project.description}</p>
+
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tech.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 py-1 rounded-full text-xs font-medium bg-dark-50 dark:bg-dark-800 text-dark-600 dark:text-dark-400 transition-transform group-hover:-translate-y-0.5"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={project.liveUrl}
+                      className={`flex-1 py-2.5 rounded-lg bg-gradient-to-r ${project.color} text-white text-sm font-semibold hover:shadow-lg transition-shadow flex items-center justify-center`}
+                    >
+                      Visit Website
+                      <ExternalLink className="ml-2 w-3.5 h-3.5" />
+                    </a>
+                    <a
+                      href={project.caseStudyUrl}
+                      className="px-4 py-2.5 rounded-lg border border-dark-200 dark:border-dark-700 text-dark-700 dark:text-dark-300 text-sm font-semibold hover:bg-dark-50 dark:hover:bg-dark-800 transition-colors flex items-center justify-center"
+                    >
+                      Case Study
+                      <ArrowRight className="ml-2 w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          {filteredProjects.length === 0 && (
+            <p className="text-center text-dark-500 dark:text-dark-400 mt-8">
+              No projects match that search or filter.
+            </p>
+          )}
+        </div>
+      </section>
+
+      {/* Roadmap Section */}
+      <section className="section-padding bg-dark-50/50 dark:bg-dark-900/50">
         <div className="container-custom">
           <SectionHeading 
             badge="Product Roadmap"

@@ -8,91 +8,6 @@ import {
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 
-// --- New: "Our Work" showcase data ---
-const showcaseFilters = ['All', 'Website', 'Mobile App', 'SaaS', 'Dashboard']
-
-const showcaseStats = [
-  { value: '10+', label: 'Projects Delivered' },
-  { value: '98%', label: 'Client Satisfaction' },
-  { value: '6+', label: 'Happy Clients' },
-  { value: '2+', label: 'Years Building' },
-]
-
-const featuredProject = {
-  id: 'sl-hub',
-  name: 'SL Hub',
-  category: 'Mobile App',
-  description: 'A community platform for tech builders, built with a custom dark-themed UI system. Live stats, push notification infrastructure, notification/email digests, and a restricted admin panel keep the community informed and organized.',
-  tech: ['React Native', 'Expo Router', 'Supabase', 'Zustand'],
-  color: 'from-blue-500 to-cyan-500',
-  icon: Smartphone,
-  stats: {
-    builders: '100+',
-    uptime: '99.9%',
-    build: '8 weeks',
-  },
-  liveUrl: '#',
-  caseStudyUrl: '#',
-}
-
-const showcaseProjects = [
-  {
-    id: 'tutorly',
-    name: 'Tutorly',
-    category: 'SaaS',
-    description: 'A Q&A web platform connecting developers with tutors for real-time help and mentorship.',
-    tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-purple-500 to-pink-500',
-    icon: Users,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-  {
-    id: 'atlas-nexus',
-    name: 'Atlas Nexus',
-    category: 'Dashboard',
-    description: 'A modular knowledge management app with a full light/dark theme system built on CSS custom properties.',
-    tech: ['React', 'TypeScript', 'Framer Motion'],
-    color: 'from-green-500 to-teal-500',
-    icon: Database,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-  {
-    id: 'knust-mindspace',
-    name: 'KNUST MindSpace',
-    category: 'Website',
-    description: 'A mental wellness platform for students, with moderated, safe community discussions.',
-    tech: ['React', 'TypeScript', 'Supabase'],
-    color: 'from-indigo-500 to-purple-500',
-    icon: Shield,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-  {
-    id: 'partnersup',
-    name: 'PartnerSup',
-    category: 'Mobile App',
-    description: 'A partnership record tracking app engineered for reliability across a wide range of Android devices.',
-    tech: ['React Native', 'Expo'],
-    color: 'from-yellow-500 to-orange-500',
-    icon: Smartphone,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-  {
-    id: 'skillmap',
-    name: 'SkillMap',
-    category: 'Dashboard',
-    description: 'A department and role-matching tool used to onboard and organize new team members automatically.',
-    tech: ['React', 'Groq API', 'Netlify Functions'],
-    color: 'from-red-500 to-pink-500',
-    icon: BarChart3,
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-]
-
 const products = [
   {
     id: 'cloudflow',
@@ -273,6 +188,90 @@ const integrations = [
   { name: 'Figma', icon: Globe },
 ]
 
+// --- New: "Our Work" showcase data ---
+const showcaseFilters = ['All', 'Website', 'Mobile App', 'SaaS', 'Dashboard']
+
+const showcaseStats = [
+  { value: '10+', label: 'Projects Delivered' },
+  { value: '98%', label: 'Client Satisfaction' },
+  { value: '6+', label: 'Happy Clients' },
+  { value: '2+', label: 'Years Building' },
+]
+
+const featuredProject = {
+  id: 'sl-hub',
+  name: 'SL Hub',
+  category: 'Mobile App',
+  description: 'A community platform for tech builders, built with a custom dark-themed UI system. Live stats, push notification infrastructure, notification/email digests, and a restricted admin panel keep the community informed and organized.',
+  tech: ['React Native', 'Expo Router', 'Supabase', 'Zustand'],
+  color: 'from-blue-500 to-cyan-500',
+  icon: Smartphone,
+  stats: {
+    builders: '100+',
+    uptime: '99.9%',
+    build: '8 weeks',
+  },
+  liveUrl: '#',
+  caseStudyUrl: '#',
+}
+
+const showcaseProjects = [
+  {
+    id: 'tutorly',
+    name: 'Tutorly',
+    category: 'SaaS',
+    description: 'A Q&A web platform connecting developers with tutors for real-time help and mentorship.',
+    tech: ['React', 'Supabase', 'TailwindCSS'],
+    color: 'from-purple-500 to-pink-500',
+    icon: Users,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'atlas-nexus',
+    name: 'Atlas Nexus',
+    category: 'Dashboard',
+    description: 'A modular knowledge management app with a full light/dark theme system built on CSS custom properties.',
+    tech: ['React', 'TypeScript', 'Framer Motion'],
+    color: 'from-green-500 to-teal-500',
+    icon: Database,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'knust-mindspace',
+    name: 'KNUST MindSpace',
+    category: 'Website',
+    description: 'A mental wellness platform for students, with moderated, safe community discussions.',
+    tech: ['React', 'TypeScript', 'Supabase'],
+    color: 'from-indigo-500 to-purple-500',
+    icon: Shield,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'partnersup',
+    name: 'PartnerSup',
+    category: 'Mobile App',
+    description: 'A partnership record tracking app engineered for reliability across a wide range of Android devices.',
+    tech: ['React Native', 'Expo'],
+    color: 'from-yellow-500 to-orange-500',
+    icon: Smartphone,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'skillmap',
+    name: 'SkillMap',
+    category: 'Dashboard',
+    description: 'A department and role-matching tool used to onboard and organize new team members automatically.',
+    tech: ['React', 'Groq API', 'Netlify Functions'],
+    color: 'from-red-500 to-pink-500',
+    icon: BarChart3,
+    liveUrl: '#',
+    caseStudyUrl: '#',
+  },
+]
 
 export default function Products() {
   const [activeFilter, setActiveFilter] = useState('All')
@@ -309,134 +308,10 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {products.map((product, index) => (
-              <motion.div
-                key={product.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-              >
-                <Card className="h-full relative overflow-hidden">
-                  {/* Background Gradient */}
-                  <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${product.color} opacity-5 rounded-full blur-3xl transform translate-x-20 -translate-y-20`} />
-
-                  {/* Header */}
-                  <div className="flex items-start justify-between mb-6 relative">
-                    <div className="flex items-center">
-                      <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center`}>
-                        <product.icon className="w-8 h-8 text-white" />
-                      </div>
-                      <div className="ml-4">
-                        <h3 className="text-2xl font-bold text-dark-900 dark:text-white">{product.name}</h3>
-                        <p className="text-sm text-dark-500 dark:text-dark-400">{product.tagline}</p>
-                      </div>
-                    </div>
-                    <div className="flex items-center">
-                      <div className="flex items-center">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Description */}
-                  <p className="text-dark-600 dark:text-dark-400 mb-6">
-                    {product.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="grid grid-cols-2 gap-3 mb-6">
-                    {product.features.slice(0, 6).map((feature) => (
-                      <div key={feature} className="flex items-center">
-                        <CheckCircle className="w-4 h-4 text-primary-500 mr-2 flex-shrink-0" />
-                        <span className="text-sm text-dark-600 dark:text-dark-400">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Stats */}
-                  <div className="flex flex-wrap gap-4 mb-6">
-                    {Object.entries(product.stats).map(([key, value]) => (
-                      <div key={key} className="px-4 py-2 bg-dark-50 dark:bg-dark-800 rounded-lg">
-                        <p className="text-lg font-bold text-dark-900 dark:text-white">{value}</p>
-                        <p className="text-xs text-dark-500 dark:text-dark-400 capitalize">{key}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Pricing */}
-                  <div className="mb-6">
-                    <p className="text-sm font-semibold text-dark-700 dark:text-dark-300 mb-2">Starting at:</p>
-                    <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-bold text-dark-900 dark:text-white">{product.pricing.starter}</span>
-                      <span className="text-dark-500 dark:text-dark-400">/month</span>
-                    </div>
-                  </div>
-
-                  {/* CTA */}
-                  <div className="flex flex-col sm:flex-row gap-3">
-                    <button className={`flex-1 py-3 rounded-lg bg-gradient-to-r ${product.color} text-white font-semibold hover:shadow-lg transition-shadow flex items-center justify-center`}>
-                      {product.cta}
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </button>
-                    <button className="px-6 py-3 rounded-lg border border-dark-200 dark:border-dark-700 text-dark-700 dark:text-dark-300 font-semibold hover:bg-dark-50 dark:hover:bg-dark-800 transition-colors flex items-center justify-center">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Demo
-                    </button>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Integrations Section */}
-      <section className="section-padding bg-dark-50/50 dark:bg-dark-900/50">
-        <div className="container-custom">
-          <SectionHeading 
-            badge="Integrations"
-            title='Works With Your Stack'
-            subtitle='Connect with 100+ tools you already use'
-          />
-
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            {integrations.map((integration, index) => (
-              <motion.div
-                key={integration.name}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-white dark:bg-dark-900 shadow-md hover:shadow-lg transition-shadow cursor-pointer"
-              >
-                <div className="w-8 h-8 rounded-lg bg-dark-100 dark:bg-dark-800 flex items-center justify-center">
-                  <integration.icon className="w-5 h-5 text-dark-600 dark:text-dark-400" />
-                </div>
-                <span className="font-medium text-dark-700 dark:text-dark-300">{integration.name}</span>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <button className="btn-outline">
-              View All Integrations
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </section>
-
       {/* ============================= */}
       {/* NEW: Our Work / Featured Projects Section */}
-      {/* Placed above the Roadmap ("Coming Soon") section, reusing the same */}
-      {/* Card / SectionHeading / motion / gradient patterns used elsewhere on this page */}
+      {/* Placed right after the Hero, ahead of the Products Grid (CloudFlow, AI Assistant, etc.), */}
+      {/* reusing the same Card / SectionHeading / motion / gradient patterns used elsewhere on this page */}
       {/* ============================= */}
       <section className="section-padding">
         <div className="container-custom">
@@ -634,6 +509,130 @@ export default function Products() {
               No projects match that search or filter.
             </p>
           )}
+        </div>
+      </section>
+
+      {/* Products Grid */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {products.map((product, index) => (
+              <motion.div
+                key={product.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <Card className="h-full relative overflow-hidden">
+                  {/* Background Gradient */}
+                  <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${product.color} opacity-5 rounded-full blur-3xl transform translate-x-20 -translate-y-20`} />
+
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-6 relative">
+                    <div className="flex items-center">
+                      <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${product.color} flex items-center justify-center`}>
+                        <product.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <div className="ml-4">
+                        <h3 className="text-2xl font-bold text-dark-900 dark:text-white">{product.name}</h3>
+                        <p className="text-sm text-dark-500 dark:text-dark-400">{product.tagline}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center">
+                      <div className="flex items-center">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-dark-600 dark:text-dark-400 mb-6">
+                    {product.description}
+                  </p>
+
+                  {/* Features */}
+                  <div className="grid grid-cols-2 gap-3 mb-6">
+                    {product.features.slice(0, 6).map((feature) => (
+                      <div key={feature} className="flex items-center">
+                        <CheckCircle className="w-4 h-4 text-primary-500 mr-2 flex-shrink-0" />
+                        <span className="text-sm text-dark-600 dark:text-dark-400">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Stats */}
+                  <div className="flex flex-wrap gap-4 mb-6">
+                    {Object.entries(product.stats).map(([key, value]) => (
+                      <div key={key} className="px-4 py-2 bg-dark-50 dark:bg-dark-800 rounded-lg">
+                        <p className="text-lg font-bold text-dark-900 dark:text-white">{value}</p>
+                        <p className="text-xs text-dark-500 dark:text-dark-400 capitalize">{key}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Pricing */}
+                  <div className="mb-6">
+                    <p className="text-sm font-semibold text-dark-700 dark:text-dark-300 mb-2">Starting at:</p>
+                    <div className="flex items-baseline gap-2">
+                      <span className="text-3xl font-bold text-dark-900 dark:text-white">{product.pricing.starter}</span>
+                      <span className="text-dark-500 dark:text-dark-400">/month</span>
+                    </div>
+                  </div>
+
+                  {/* CTA */}
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <button className={`flex-1 py-3 rounded-lg bg-gradient-to-r ${product.color} text-white font-semibold hover:shadow-lg transition-shadow flex items-center justify-center`}>
+                      {product.cta}
+                      <ArrowRight className="ml-2 w-4 h-4" />
+                    </button>
+                    <button className="px-6 py-3 rounded-lg border border-dark-200 dark:border-dark-700 text-dark-700 dark:text-dark-300 font-semibold hover:bg-dark-50 dark:hover:bg-dark-800 transition-colors flex items-center justify-center">
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Demo
+                    </button>
+                  </div>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integrations Section */}
+      <section className="section-padding bg-dark-50/50 dark:bg-dark-900/50">
+        <div className="container-custom">
+          <SectionHeading 
+            badge="Integrations"
+            title='Works With Your Stack'
+            subtitle='Connect with 100+ tools you already use'
+          />
+
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            {integrations.map((integration, index) => (
+              <motion.div
+                key={integration.name}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
+                className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-white dark:bg-dark-900 shadow-md hover:shadow-lg transition-shadow cursor-pointer"
+              >
+                <div className="w-8 h-8 rounded-lg bg-dark-100 dark:bg-dark-800 flex items-center justify-center">
+                  <integration.icon className="w-5 h-5 text-dark-600 dark:text-dark-400" />
+                </div>
+                <span className="font-medium text-dark-700 dark:text-dark-300">{integration.name}</span>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-8">
+            <button className="btn-outline">
+              View All Integrations
+              <ArrowRight className="ml-2 w-4 h-4" />
+            </button>
+          </div>
         </div>
       </section>
 
