@@ -226,7 +226,7 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-purple-500 to-pink-500',
     icon: Users,
-    image: '', // e.g. '/images/projects/tutorly.png'
+    image: '/images/projects/tutorly.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: '#',
     caseStudyUrl: '#',
   },
@@ -238,7 +238,7 @@ const showcaseProjects = [
     tech: ['React', 'TypeScript', 'Framer Motion'],
     color: 'from-green-500 to-teal-500',
     icon: Database,
-    image: '', // e.g. '/images/projects/atlas-nexus.png'
+    image: '/images/projects/atlas-nexus.png', // e.g. '/images/projects/atlas-nexus.png'
     liveUrl: '#',
     caseStudyUrl: '#',
   },
