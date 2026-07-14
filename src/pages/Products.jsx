@@ -224,7 +224,7 @@ const showcaseProjects = [
     category: 'SaaS',
     description: 'A web platform  for real-time buying of products.',
     tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-orange-800 to-orange-500',
+    color: 'from-orange-700 to-orange-500',
     icon: Users,
     image: '/images/projects/e-commerce.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: 'tutorly-frontend-blue.vercel.app',
@@ -267,18 +267,6 @@ const showcaseProjects = [
     caseStudyUrl: '#',
   },
   {
-    id: 'knust-mindspace',
-    name: 'KNUST MindSpace',
-    category: 'Website',
-    description: 'A mental wellness platform for students, with moderated, safe community discussions.',
-    tech: ['React', 'TypeScript', 'Supabase'],
-    color: 'from-indigo-500 to-purple-500',
-    icon: Shield,
-    image: '', // e.g. '/images/projects/knust-mindspace.png'
-    liveUrl: '#',
-    caseStudyUrl: '#',
-  },
-  {
     id: 'partnersup',
     name: 'PartnerSup',
     category: 'Mobile App',
@@ -298,8 +286,8 @@ const showcaseProjects = [
     tech: ['React', 'Groq API', 'Netlify Functions'],
     color: 'from-red-500 to-pink-500',
     icon: BarChart3,
-    image: '', // e.g. '/images/projects/skillmap.png'
-    liveUrl: '#',
+    image: '/images/projects/sl-info', // e.g. '/images/projects/skillmap.png'
+    liveUrl: 'sl-info-666c.netlify.app',
     caseStudyUrl: '#',
   },
 ]
