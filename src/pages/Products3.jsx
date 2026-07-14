@@ -206,6 +206,8 @@ const featuredProject = {
   tech: ['React Native', 'Expo Router', 'Supabase', 'Zustand'],
   color: 'from-blue-500 to-cyan-500',
   icon: Smartphone,
+  // Drop a real screenshot here, e.g. '/images/projects/sl-hub.png'
+  image: '',
   stats: {
     builders: '100+',
     uptime: '99.9%',
@@ -224,6 +226,7 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-purple-500 to-pink-500',
     icon: Users,
+    image: '/images/projects/tutorly.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: '#',
     caseStudyUrl: '#',
   },
@@ -235,6 +238,7 @@ const showcaseProjects = [
     tech: ['React', 'TypeScript', 'Framer Motion'],
     color: 'from-green-500 to-teal-500',
     icon: Database,
+    image: '/images/projects/atlas-nexus.png', // e.g. '/images/projects/atlas-nexus.png'
     liveUrl: '#',
     caseStudyUrl: '#',
   },
@@ -246,6 +250,7 @@ const showcaseProjects = [
     tech: ['React', 'TypeScript', 'Supabase'],
     color: 'from-indigo-500 to-purple-500',
     icon: Shield,
+    image: '', // e.g. '/images/projects/knust-mindspace.png'
     liveUrl: '#',
     caseStudyUrl: '#',
   },
@@ -257,6 +262,7 @@ const showcaseProjects = [
     tech: ['React Native', 'Expo'],
     color: 'from-yellow-500 to-orange-500',
     icon: Smartphone,
+    image: '', // e.g. '/images/projects/partnersup.png'
     liveUrl: '#',
     caseStudyUrl: '#',
   },
@@ -268,6 +274,7 @@ const showcaseProjects = [
     tech: ['React', 'Groq API', 'Netlify Functions'],
     color: 'from-red-500 to-pink-500',
     icon: BarChart3,
+    image: '', // e.g. '/images/projects/skillmap.png'
     liveUrl: '#',
     caseStudyUrl: '#',
   },
@@ -386,8 +393,18 @@ export default function Products() {
                     <span className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
                     <span className="w-2.5 h-2.5 rounded-full bg-green-400" />
                   </div>
-                  <div className={`h-64 bg-gradient-to-br ${featuredProject.color} flex items-center justify-center`}>
-                    <featuredProject.icon className="w-20 h-20 text-white/80" />
+                  <div className="h-64 bg-dark-100 dark:bg-dark-800 overflow-hidden">
+                    {featuredProject.image ? (
+                      <img
+                        src={featuredProject.image}
+                        alt={`${featuredProject.name} screenshot`}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    ) : (
+                      <div className={`w-full h-full bg-gradient-to-br ${featuredProject.color} flex items-center justify-center`}>
+                        <featuredProject.icon className="w-20 h-20 text-white/80" />
+                      </div>
+                    )}
                   </div>
                 </div>
 
@@ -460,8 +477,18 @@ export default function Products() {
                       <span className="w-2 h-2 rounded-full bg-yellow-400" />
                       <span className="w-2 h-2 rounded-full bg-green-400" />
                     </div>
-                    <div className={`h-36 bg-gradient-to-br ${project.color} flex items-center justify-center transition-transform duration-500 group-hover:scale-105`}>
-                      <project.icon className="w-12 h-12 text-white/80" />
+                    <div className="h-36 bg-dark-100 dark:bg-dark-800 overflow-hidden">
+                      {project.image ? (
+                        <img
+                          src={project.image}
+                          alt={`${project.name} screenshot`}
+                          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                        />
+                      ) : (
+                        <div className={`w-full h-full bg-gradient-to-br ${project.color} flex items-center justify-center transition-transform duration-500 group-hover:scale-105`}>
+                          <project.icon className="w-12 h-12 text-white/80" />
+                        </div>
+                      )}
                     </div>
                   </div>
 
