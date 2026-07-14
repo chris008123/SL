@@ -219,15 +219,15 @@ const featuredProject = {
 
 const showcaseProjects = [
   {
-    id: 'ecommerce',
-    name: 'E-commerce',
+    id: 'miuzicly',
+    name: 'Miuzicly',
     category: 'SaaS',
-    description: 'A web platform for real-time buying of products.',
-    tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-orange-700 to-orange-500',
-    icon: Users,
-    image: '/images/projects/e-commerce.png', // e.g. '/images/projects/tutorly.png'
-    liveUrl: 'tutorly-frontend-blue.vercel.app',
+    description: 'A web app engineered for keeping musical scripts.',
+    tech: ['React', 'TypeScript', 'Framer Motion'],
+    color: 'from-yellow-500 to-orange-500',
+    icon: Smartphone,
+    image: '/images/projects/miuzicly.png', // e.g. '/images/projects/partnersup.png'
+    liveUrl: 'miuzicly.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -255,27 +255,27 @@ const showcaseProjects = [
     caseStudyUrl: '#',
   },
   {
-    id: 'atlas-nexus',
-    name: 'Atlas Nexus',
+    id: 'ecommerce',
+    name: 'E-commerce',
+    category: 'SaaS',
+    description: 'A web platform for real-time buying of products.',
+    tech: ['React', 'Supabase', 'TailwindCSS'],
+    color: 'from-orange-700 to-orange-500',
+    icon: Users,
+    image: '/images/projects/e-commerce.png', // e.g. '/images/projects/tutorly.png'
+    liveUrl: 'tutorly-frontend-blue.vercel.app',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'restaurant',
+    name: 'Restaurant',
     category: 'Dashboard',
     description: 'A modular knowledge management app with a full light/dark theme system built on CSS custom properties.',
     tech: ['React', 'TypeScript', 'Framer Motion'],
     color: 'from-green-500 to-teal-500',
     icon: Database,
-    image: '', // e.g. '/images/projects/atlas-nexus.png'
+    image: '/images/projects/restaurant.png', // e.g. '/images/projects/atlas-nexus.png'
     liveUrl: 'atlas-nexus-six.vercel.app',
-    caseStudyUrl: '#',
-  },
-  {
-    id: 'miuzicly',
-    name: 'Miuzicly',
-    category: 'SaaS',
-    description: 'A web app engineered for keeping musical scripts.',
-    tech: ['React', 'TypeScript', 'Framer Motion'],
-    color: 'from-yellow-500 to-orange-500',
-    icon: Smartphone,
-    image: '/images/projects/miuzicly.png', // e.g. '/images/projects/partnersup.png'
-    liveUrl: 'miuzicly.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -286,7 +286,7 @@ const showcaseProjects = [
     tech: ['React', 'Groq API', 'Netlify Functions'],
     color: 'from-red-500 to-pink-500',
     icon: BarChart3,
-    image: '/images/projects/sl-info', // e.g. '/images/projects/skillmap.png'
+    image: '/images/projects/sl-info.png', // e.g. '/images/projects/skillmap.png'
     liveUrl: 'sl-info-666c.netlify.app',
     caseStudyUrl: '#',
   },
