@@ -227,7 +227,7 @@ const showcaseProjects = [
     color: 'from-purple-500 to-pink-500',
     icon: Users,
     image: '/images/projects/tutorly.png', // e.g. '/images/projects/tutorly.png'
-    liveUrl: '#',
+    liveUrl: 'tutorly-frontend-blue.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -239,7 +239,7 @@ const showcaseProjects = [
     color: 'from-green-500 to-teal-500',
     icon: Database,
     image: '', // e.g. '/images/projects/atlas-nexus.png'
-    liveUrl: '#',
+    liveUrl: 'atlas-nexus-six.vercel.app',
     caseStudyUrl: '#',
   },
   {
