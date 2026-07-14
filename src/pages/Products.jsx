@@ -222,7 +222,7 @@ const showcaseProjects = [
     id: 'ecommerce',
     name: 'E-commerce',
     category: 'SaaS',
-    description: 'A web platform  for real-time buying of products.',
+    description: 'A web platform for real-time buying of products.',
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-orange-700 to-orange-500',
     icon: Users,
@@ -267,15 +267,15 @@ const showcaseProjects = [
     caseStudyUrl: '#',
   },
   {
-    id: 'partnersup',
-    name: 'PartnerSup',
-    category: 'Mobile App',
-    description: 'A partnership record tracking app engineered for reliability across a wide range of Android devices.',
-    tech: ['React Native', 'Expo'],
+    id: 'miuzicly',
+    name: 'Miuzicly',
+    category: 'SaaS',
+    description: 'A web app engineered for keeping musical scripts.',
+    tech: ['React', 'TypeScript', 'Framer Motion'],
     color: 'from-yellow-500 to-orange-500',
     icon: Smartphone,
-    image: '', // e.g. '/images/projects/partnersup.png'
-    liveUrl: '#',
+    image: '/images/projects/miuzicly.png', // e.g. '/images/projects/partnersup.png'
+    liveUrl: 'miuzicly.vercel.app',
     caseStudyUrl: '#',
   },
   {
