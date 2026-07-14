@@ -715,7 +715,7 @@ export default function Products() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               { quarter: 'Q1 2026', title: 'AI Copilot', desc: 'Intelligent coding assistant for developers', status: 'In Development' },
-              { quarter: 'Q2 2026', title: 'Mobile SDK', desc: 'Native mobile SDKs for all products', status: 'Planning' },
+              { quarter: 'Q2 2026', title: 'Mobile SDK', desc: 'Native mobile SDKs for all products', status: 'In Development' },
               { quarter: 'Q3 2026', title: 'Enterprise SSO', desc: 'Advanced authentication options', status: 'Planning' },
             ].map((item, index) => (
               <motion.div
