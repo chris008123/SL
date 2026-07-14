@@ -209,7 +209,7 @@ const featuredProject = {
   // Drop a real screenshot here, e.g. '/images/projects/sl-hub.png'
   image: '/images/projects/sl-hub.png',
   stats: {
-    builders: '100+',
+    builders: '2',
     uptime: '99.9%',
     build: '8 weeks',
   },
@@ -224,7 +224,7 @@ const showcaseProjects = [
     category: 'SaaS',
     description: 'A web app engineered for keeping musical scripts.',
     tech: ['React', 'TypeScript', 'Framer Motion'],
-    color: 'from-yellow-500 to-orange-500',
+    color: 'from-dark-green to-lime-green-500',
     icon: Smartphone,
     image: '/images/projects/miuzicly.png', // e.g. '/images/projects/partnersup.png'
     liveUrl: 'miuzicly.vercel.app',
@@ -236,7 +236,7 @@ const showcaseProjects = [
     category: 'SaaS',
     description: 'A Q&A web platform connecting developers with tutors for real-time help and mentorship.',
     tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-purple-500 to-pink-500',
+    color: 'from-pink-500 to-rose-500',
     icon: Users,
     image: '/images/projects/tutorly.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: 'tutorly-frontend-blue.vercel.app',
@@ -248,7 +248,7 @@ const showcaseProjects = [
     category: 'SaaS',
     description: 'A web platform for real-time buying of products.',
     tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-orange-700 to-orange-500',
+    color: 'from-maroon-900 to-crimson-800',
     icon: Users,
     image: '/images/projects/rabi.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: 'rabireigns.vercel.app',
@@ -284,7 +284,7 @@ const showcaseProjects = [
     category: 'SaaS',
     description: 'A web platform for real-time buying of products.',
     tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-orange-700 to-orange-500',
+    color: 'from-yellow-400 to-yellow-600',
     icon: Users,
     image: '/images/projects/olympus.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: 'olympus-black.vercel.app',
@@ -296,7 +296,7 @@ const showcaseProjects = [
     category: 'Dashboard',
     description: 'A modular knowledge management app with a full light/dark theme system built on CSS custom properties.',
     tech: ['React', 'TypeScript', 'Framer Motion'],
-    color: 'from-green-500 to-teal-500',
+    color: 'from-blue-600 to-sky-500',
     icon: Database,
     image: '/images/projects/restaurant.png', // e.g. '/images/projects/atlas-nexus.png'
     liveUrl: 'atlas-nexus-six.vercel.app',
@@ -308,7 +308,7 @@ const showcaseProjects = [
     category: 'Dashboard',
     description: 'A department and role-matching tool used to onboard and organize new team members automatically.',
     tech: ['React', 'Groq API', 'Netlify Functions'],
-    color: 'from-red-500 to-pink-500',
+    color: 'from-violet-500 to-fuchsia-500',
     icon: BarChart3,
     image: '/images/projects/sl-info.png', // e.g. '/images/projects/skillmap.png'
     liveUrl: 'sl-info-666c.netlify.app',
