@@ -243,6 +243,18 @@ const showcaseProjects = [
     caseStudyUrl: '#',
   },
   {
+    id: 'rabi',
+    name: 'RabiReigns',
+    category: 'SaaS',
+    description: 'A web platform for real-time buying of products.',
+    tech: ['React', 'Supabase', 'TailwindCSS'],
+    color: 'from-orange-700 to-orange-500',
+    icon: Users,
+    image: '/images/projects/rabi.png', // e.g. '/images/projects/tutorly.png'
+    liveUrl: 'rabireigns.vercel.app',
+    caseStudyUrl: '#',
+  },
+  {
     id: 'uni-cam',
     name: 'Uni-cam',
     category: 'SaaS',
@@ -264,6 +276,18 @@ const showcaseProjects = [
     icon: Users,
     image: '/images/projects/e-commerce.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: 'tutorly-frontend-blue.vercel.app',
+    caseStudyUrl: '#',
+  },
+  {
+    id: 'olympus',
+    name: 'Olympus',
+    category: 'SaaS',
+    description: 'A web platform for real-time buying of products.',
+    tech: ['React', 'Supabase', 'TailwindCSS'],
+    color: 'from-orange-700 to-orange-500',
+    icon: Users,
+    image: '/images/projects/olympus.png', // e.g. '/images/projects/tutorly.png'
+    liveUrl: 'olympus-black.vercel.app',
     caseStudyUrl: '#',
   },
   {
