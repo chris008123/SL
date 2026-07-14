@@ -231,6 +231,18 @@ const showcaseProjects = [
     caseStudyUrl: '#',
   },
   {
+    id: 'uni-cam',
+    name: 'Uni-cam',
+    category: 'SaaS',
+    description: 'A web platform connecting university students with real-time video and connection.',
+    tech: ['React', 'Supabase', 'TailwindCSS'],
+    color: 'from-white-500 to-blue-500',
+    icon: Users,
+    image: '/images/projects/Uni-cam.png', // e.g. '/images/projects/tutorly.png'
+    liveUrl: 'uni-cam.vercel.app',
+    caseStudyUrl: '#',
+  },
+  {
     id: 'atlas-nexus',
     name: 'Atlas Nexus',
     category: 'Dashboard',
