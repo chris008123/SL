@@ -224,7 +224,7 @@ const showcaseProjects = [
     category: 'SaaS',
     description: 'A web platform  for real-time buying of products.',
     tech: ['React', 'Supabase', 'TailwindCSS'],
-    color: 'from-green-500 to-teal-500',
+    color: 'from-orange-200 to-orange-500',
     icon: Users,
     image: '/images/projects/e-commerce.png', // e.g. '/images/projects/tutorly.png'
     liveUrl: 'tutorly-frontend-blue.vercel.app',
