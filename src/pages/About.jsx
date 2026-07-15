@@ -148,7 +148,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent-500 to-purple-600 flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-accent-500 to-accent-700 flex items-center justify-center mb-6">
                 <Eye className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-dark-900 dark:text-white mb-4">Our Vision</h2>
@@ -224,7 +224,7 @@ export default function About() {
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-dark-200 dark:bg-dark-700" />
+              <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 top-0 bottom-0 w-0.5 bg-dark-200 dark:bg-dark-700" />
 
               {milestones.map((milestone, index) => (
                 <motion.div
