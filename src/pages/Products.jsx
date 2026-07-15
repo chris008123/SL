@@ -213,6 +213,7 @@ const featuredProject = {
     uptime: '99.9%',
     build: '8 weeks',
   },
+  // No public web URL yet since this is a mobile app — point this at your App/Play Store listing when live
   liveUrl: '#',
   caseStudyUrl: '#',
 }
@@ -226,8 +227,8 @@ const showcaseProjects = [
     tech: ['React', 'TypeScript', 'Framer Motion'],
     color: 'bg-gradient-to-r from-green-800 via-green-600 to-lime-500',
     icon: Smartphone,
-    image: '/images/projects/miuzicly.png', // e.g. '/images/projects/partnersup.png'
-    liveUrl: 'miuzicly.vercel.app',
+    image: '/images/projects/miuzicly.png',
+    liveUrl: 'https://miuzicly.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -238,8 +239,8 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-pink-500 to-rose-500',
     icon: Users,
-    image: '/images/projects/tutorly.png', // e.g. '/images/projects/tutorly.png'
-    liveUrl: 'tutorly-frontend-blue.vercel.app',
+    image: '/images/projects/tutorly.png',
+    liveUrl: 'https://tutorly-frontend-blue.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -250,8 +251,8 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-rose-950 to-red-700',
     icon: Users,
-    image: '/images/projects/rabi.png', // e.g. '/images/projects/tutorly.png'
-    liveUrl: 'rabireigns.vercel.app',
+    image: '/images/projects/rabi.png',
+    liveUrl: 'https://rabireigns.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -262,8 +263,8 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-blue-500 to-cyan-300',
     icon: Users,
-    image: '/images/projects/Uni-cam.png', // e.g. '/images/projects/tutorly.png'
-    liveUrl: 'uni-cam.vercel.app',
+    image: '/images/projects/Uni-cam.png',
+    liveUrl: 'https://uni-cam.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -274,8 +275,8 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-orange-700 to-orange-500',
     icon: Users,
-    image: '/images/projects/e-commerce.png', // e.g. '/images/projects/tutorly.png'
-    liveUrl: 'tutorly-frontend-blue.vercel.app',
+    image: '/images/projects/e-commerce.png',
+    liveUrl: 'https://e-commerce-bice-one-71.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -286,8 +287,8 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-yellow-400 to-yellow-600',
     icon: Users,
-    image: '/images/projects/olympus.png', // e.g. '/images/projects/tutorly.png'
-    liveUrl: 'olympus-black.vercel.app',
+    image: '/images/projects/olympus.png',
+    liveUrl: 'https://olympus-black.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -298,8 +299,8 @@ const showcaseProjects = [
     tech: ['React', 'TypeScript', 'Framer Motion'],
     color: 'from-blue-600 to-sky-500',
     icon: Database,
-    image: '/images/projects/restaurant.png', // e.g. '/images/projects/atlas-nexus.png'
-    liveUrl: 'atlas-nexus-six.vercel.app',
+    image: '/images/projects/restaurant.png',
+    liveUrl: 'https://restaurant-three-steel.vercel.app',
     caseStudyUrl: '#',
   },
   {
@@ -310,8 +311,8 @@ const showcaseProjects = [
     tech: ['React', 'Groq API', 'Netlify Functions'],
     color: 'from-violet-500 to-fuchsia-500',
     icon: BarChart3,
-    image: '/images/projects/sl-info.png', // e.g. '/images/projects/skillmap.png'
-    liveUrl: 'sl-info-666c.netlify.app',
+    image: '/images/projects/sl-info.png',
+    liveUrl: 'https://sl-info-666c.netlify.app',
     caseStudyUrl: '#',
   },
 ]
@@ -474,6 +475,8 @@ export default function Products() {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <a
                       href={featuredProject.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className={`flex-1 py-3 rounded-lg bg-gradient-to-r ${featuredProject.color} text-white font-semibold hover:shadow-lg transition-shadow flex items-center justify-center`}
                     >
                       Visit Live Website
@@ -551,6 +554,8 @@ export default function Products() {
                       <div className="flex flex-col sm:flex-row gap-3">
                         <a
                           href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className={`flex-1 py-3 rounded-lg bg-gradient-to-r ${project.color} text-white font-semibold hover:shadow-lg transition-shadow flex items-center justify-center`}
                         >
                           Visit Live Website
