@@ -6,14 +6,10 @@ import {
 import SectionHeading from '../components/ui/SectionHeading'
 import Card from '../components/ui/Card'
 
-// Flat solid-color palette (matches the reference screenshot's icon badges)
+// Restrained two-color palette: indigo as primary, slate as neutral secondary
 const palette = [
-  'bg-orange-500',
-  'bg-violet-500',
-  'bg-sky-500',
-  'bg-rose-500',
-  'bg-emerald-500',
-  'bg-amber-500',
+  'bg-indigo-600',
+  'bg-slate-700',
 ]
 
 const values = [
@@ -33,13 +29,13 @@ const values = [
     icon: Target,
     title: 'Excellence',
     description: 'We strive for perfection in every line of code, every design, and every interaction.',
-    color: palette[2],
+    color: palette[0],
   },
   {
     icon: Users,
     title: 'Collaboration',
     description: 'We work as an extension of your team, fostering true partnership and shared success.',
-    color: palette[3],
+    color: palette[1],
   },
 ]
 
@@ -72,28 +68,28 @@ const team = [
     role: 'Senior Graphics Designer',
     bio: 'Graphic design expert with background in fintech and healthcare technology.',
     avatar: 'SB',
-    color: palette[2],
+    color: palette[0],
   },
   {
     name: 'Tracy Baffoe',
     role: 'General Secretary',
     bio: 'Dedicated operations and administration professional responsible for coordinating meetings, maintaining corporate records, managing internal communications, and ensuring smooth organizational workflows that support the company’s growth and success.',
     avatar: 'TB',
-    color: palette[3],
+    color: palette[1],
   },
   {
     name: 'Joe Tibuah',
     role: 'DPO',
     bio: 'Compliance lead expert in "Privacy by Design" for digital services, ensuring innovation meets rigorous security standards.',
     avatar: 'JT',
-    color: palette[4],
+    color: palette[0],
   },
   {
     name: 'Kaf Makaty',
     role: 'Financial Manager',
     bio: 'Corporate finance expert with a background in fintech growth and capital management.',
     avatar: 'KM',
-    color: palette[5],
+    color: palette[1],
   },
   {
     name: 'Chris Appiah Jnr',
@@ -130,12 +126,12 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 mb-6">
+            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 mb-6">
               About SL
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
               Building the Future of{' '}
-              <span className="bg-gradient-to-r from-orange-500 via-violet-500 to-sky-500 bg-clip-text text-transparent">Technology</span>
+              <span className="text-indigo-600 dark:text-indigo-400">Technology</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400">
               We're a team of passionate technologists dedicated to transforming businesses through innovative software solutions. Since 2025, we've been helping companies across the globe embrace the future.
@@ -153,7 +149,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="w-16 h-16 rounded-xl bg-orange-500 flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-xl bg-indigo-600 flex items-center justify-center mb-6">
                 <Target className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Our Mission</h2>
@@ -170,7 +166,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="w-16 h-16 rounded-xl bg-violet-500 flex items-center justify-center mb-6">
+              <div className="w-16 h-16 rounded-xl bg-slate-700 flex items-center justify-center mb-6">
                 <Eye className="w-8 h-8 text-white" />
               </div>
               <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Our Vision</h2>
@@ -186,7 +182,7 @@ export default function About() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 via-violet-500 to-sky-500">
+      <section className="py-20 bg-indigo-600">
         <div className="container-custom">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -261,7 +257,7 @@ export default function About() {
                 >
                   <div className="flex-1 md:px-8 pl-20 md:pl-0">
                     <div className={`${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-orange-100 dark:bg-orange-900/30 text-orange-600 dark:text-orange-400 mb-2">
+                      <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-semibold bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 mb-2">
                         {milestone.year}
                       </span>
                       <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">
@@ -272,7 +268,7 @@ export default function About() {
                       </p>
                     </div>
                   </div>
-                  <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center z-10">
+                  <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 rounded-full bg-indigo-600 flex items-center justify-center z-10">
                     <Calendar className="w-4 h-4 text-white" />
                   </div>
                 </motion.div>
@@ -310,7 +306,7 @@ export default function About() {
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">
                   {member.name}
                 </h3>
-                <p className="text-orange-600 dark:text-orange-400 font-medium mb-2">
+                <p className="text-indigo-600 dark:text-indigo-400 font-medium mb-2">
                   {member.role}
                 </p>
                 <p className="text-slate-600 dark:text-slate-400 text-sm">
@@ -324,7 +320,7 @@ export default function About() {
 
       {/* CTA Section */}
       <section className="section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-violet-500 to-sky-500 opacity-5" />
+        <div className="absolute inset-0 bg-indigo-600 opacity-5" />
         <div className="container-custom relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -338,7 +334,7 @@ export default function About() {
               <p className="text-lg text-slate-600 dark:text-slate-400 mb-8">
                 We're always looking for talented individuals who share our passion for technology and innovation.
               </p>
-              <a href="/careers" className="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-orange-500 hover:bg-orange-600 transition-all duration-300 shadow-lg shadow-orange-500/25 hover:shadow-orange-500/40">
+              <a href="/careers" className="inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white bg-indigo-600 hover:bg-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-600/25 hover:shadow-indigo-600/40">
                 View Open Positions
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
