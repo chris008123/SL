@@ -124,8 +124,6 @@ export default function Footer() {
               <Link to="/privacy" className="hover:text-primary-400 transition-colors duration-200">Privacy</Link>
               <span>•</span>
               <Link to="/terms" className="hover:text-primary-400 transition-colors duration-200">Terms</Link>
-              <span>•</span>
-              <Link to="/cookies" className="hover:text-primary-400 transition-colors duration-200">Cookies</Link>
             </div>
 
             {/* Social Links */}

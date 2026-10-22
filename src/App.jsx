@@ -2,6 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { ThemeProvider } from './context/ThemeContext'
 import Layout from './components/Layout'
+import RouteSEO from './components/RouteSEO'
 import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <ThemeProvider>
+      <RouteSEO />
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />

@@ -1,5 +1,7 @@
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import useSEO from '../hooks/useSEO'
+import { SITE_URL, SITE_NAME, NOT_FOUND_SEO } from '../seoConfig'
 import {
   ArrowLeft, Clock, Eye, Calendar, Tag,
   Code, Cpu, Cloud, Shield, BarChart3, Share2, BookOpen
@@ -619,6 +621,36 @@ export default function BlogPost() {
   const navigate = useNavigate()
 
   const post = blogPosts.find((p) => String(p.id) === String(id))
+
+  // SEO: runs on every render (hooks must not be called conditionally),
+  // so it sits before the "not found" early return below.
+  const postPath = `/blog/${id}`
+  let isoDate
+  if (post) {
+    const parsed = new Date(post.date)
+    if (!Number.isNaN(parsed.getTime())) isoDate = parsed.toISOString().slice(0, 10)
+  }
+  useSEO(
+    post
+      ? {
+          title: `${post.title} | ${SITE_NAME} Blog`,
+          description:
+            post.excerpt.length > 155 ? `${post.excerpt.slice(0, 152)}...` : post.excerpt,
+          path: postPath,
+          type: 'article',
+          jsonLd: {
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: post.title,
+            description: post.excerpt,
+            author: { '@type': 'Person', name: post.author },
+            ...(isoDate ? { datePublished: isoDate } : {}),
+            mainEntityOfPage: `${SITE_URL}${postPath}`,
+            publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+          },
+        }
+      : { ...NOT_FOUND_SEO, path: postPath }
+  )
 
   if (!post) {
     return (

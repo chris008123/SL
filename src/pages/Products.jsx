@@ -206,8 +206,8 @@ const featuredProject = {
   tech: ['React Native', 'Expo Router', 'Supabase', 'Zustand'],
   color: 'from-blue-500 to-cyan-500',
   icon: Smartphone,
-  // Drop a real screenshot here, e.g. '/images/projects/sl-hub.png'
-  image: '/images/projects/sl-hub.png',
+  // Drop a real screenshot here, e.g. '/images/projects/sl-hub.webp'
+  image: '/images/projects/sl-hub.webp',
   stats: {
     builders: '2',
     uptime: '99.9%',
@@ -227,7 +227,7 @@ const showcaseProjects = [
     tech: ['React', 'TypeScript', 'Framer Motion'],
     color: 'bg-gradient-to-r from-green-800 via-green-600 to-lime-500',
     icon: Smartphone,
-    image: '/images/projects/miuzicly.png',
+    image: '/images/projects/miuzicly.webp',
     liveUrl: 'https://miuzicly.vercel.app',
     caseStudyUrl: '#',
   },
@@ -239,7 +239,7 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-pink-500 to-rose-500',
     icon: Users,
-    image: '/images/projects/tutorly.png',
+    image: '/images/projects/tutorly.webp',
     liveUrl: 'https://tutorly-frontend-blue.vercel.app',
     caseStudyUrl: '#',
   },
@@ -251,7 +251,7 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-rose-950 to-red-700',
     icon: Users,
-    image: '/images/projects/rabi.png',
+    image: '/images/projects/rabi.webp',
     liveUrl: 'https://rabireigns.vercel.app',
     caseStudyUrl: '#',
   },
@@ -263,7 +263,7 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-blue-500 to-cyan-300',
     icon: Users,
-    image: '/images/projects/Uni-cam.png',
+    image: '/images/projects/Uni-cam.webp',
     liveUrl: 'https://uni-cam.vercel.app',
     caseStudyUrl: '#',
   },
@@ -275,7 +275,7 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-orange-700 to-orange-500',
     icon: Users,
-    image: '/images/projects/e-commerce.png',
+    image: '/images/projects/e-commerce.webp',
     liveUrl: 'https://e-commerce-bice-one-71.vercel.app',
     caseStudyUrl: '#',
   },
@@ -287,7 +287,7 @@ const showcaseProjects = [
     tech: ['React', 'Supabase', 'TailwindCSS'],
     color: 'from-yellow-400 to-yellow-600',
     icon: Users,
-    image: '/images/projects/olympus.png',
+    image: '/images/projects/olympus.webp',
     liveUrl: 'https://olympus-black.vercel.app',
     caseStudyUrl: '#',
   },
@@ -299,7 +299,7 @@ const showcaseProjects = [
     tech: ['React', 'TypeScript', 'Framer Motion'],
     color: 'from-blue-600 to-sky-500',
     icon: Database,
-    image: '/images/projects/restaurant.png',
+    image: '/images/projects/restaurant.webp',
     liveUrl: 'https://restaurant-three-steel.vercel.app',
     caseStudyUrl: '#',
   },
@@ -311,7 +311,7 @@ const showcaseProjects = [
     tech: ['React', 'Groq API', 'Netlify Functions'],
     color: 'from-violet-500 to-fuchsia-500',
     icon: BarChart3,
-    image: '/images/projects/sl-info.png',
+    image: '/images/projects/sl-info.webp',
     liveUrl: 'https://sl-info-666c.netlify.app',
     caseStudyUrl: '#',
   },
@@ -435,6 +435,7 @@ export default function Products() {
                       <img
                         src={featuredProject.image}
                         alt={`${featuredProject.name} screenshot`}
+                        decoding="async"
                         className="w-full h-full object-cover object-top"
                       />
                     ) : (
@@ -522,6 +523,8 @@ export default function Products() {
                           <img
                             src={project.image}
                             alt={`${project.name} screenshot`}
+                            loading="lazy"
+                            decoding="async"
                             className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                           />
                         ) : (
