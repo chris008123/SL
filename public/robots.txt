@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://sl.vercel.app/sitemap.xml
+Sitemap: https://sl-gh.com/sitemap.xml
 
 # Disallow admin/private areas
 Disallow: /admin

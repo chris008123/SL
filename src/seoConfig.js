@@ -1,8 +1,10 @@
 // Central SEO settings for the whole site.
 //
-// IMPORTANT: if you move to a custom domain (e.g. https://sl.com.gh), change
-// SITE_URL here, then also update the same domain in:
-//   - index.html   (canonical, og:url, JSON-LD "url")
+// The main address is https://sl-gh.com (no "www"). In Vercel, set
+// www.sl-gh.com to redirect to sl-gh.com so Google sees one version only.
+//
+// If you ever change domain, update SITE_URL here and the same address in:
+//   - index.html   (canonical, og:url, og:image, JSON-LD)
 //   - public/sitemap.xml
 //   - public/robots.txt (Sitemap line)
 
