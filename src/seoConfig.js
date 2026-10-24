@@ -6,7 +6,7 @@
 //   - public/sitemap.xml
 //   - public/robots.txt (Sitemap line)
 
-export const SITE_URL = 'https://sl.vercel.app'
+export const SITE_URL = 'https://sl-gh.com'
 export const SITE_NAME = 'SL'
 export const DEFAULT_IMAGE = '/og-image.jpg'
 
